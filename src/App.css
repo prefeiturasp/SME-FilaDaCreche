@@ -28,8 +28,13 @@
 }
 
 /*  */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   background: #888;
+  margin-bottom: -90px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
@@ -145,7 +150,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100px;
+  height: 60px;
 }
 .logo-banner {
   background: #852eb9;
@@ -156,10 +161,15 @@ a {
   margin: 0;
   padding: 15px 0;
   background: #5f5863;
-  position: absolute;
   bottom: 0;
   width: 100%;
   max-width: 600px;
+  height: 90px;
+}
+@media screen and (min-width: 500px) {
+  .footer {
+    position: absolute;
+  }
 }
 .list-ordered {
   font-size: 16px;
