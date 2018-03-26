@@ -2,9 +2,9 @@ export default {
   greeting: {
     title: "Olá, seja bem-  vindo!",
     paragraphs: [
-      "Este site irá te ajudar a estimar o tempo de espera para creches da Prefeitura de São Paulo.",
-      "As informações que você digitar neste site serão privativas e anônimas, ou seja, não vamos repassar elas para ninguém.",
-      "Vamos começar?"
+      "Descubra como anda a fila na sua região.",
+      "Teste mais de um endereço (casa, trabalho).",
+      "Escolha a melhor opção."
     ]
   },
   check_if_registered: {
@@ -29,17 +29,17 @@ export default {
     ]
   },
   registration_greeting: {
-    title: "Vou te explicar como fazer o cadastro na fila de espera."
+    title: "Vou te explicar como fazer o cadastro na fila de espera"
   },
   registration_documents: {
     title: "Você vai precisar destes documentos:",
     paragraphs: [
       "– Comprovante de residência com CEP (pode ser uma conta de água, luz, telefone ou gás)",
-      "– Documento com foto seu e da criança (RG, RNE ou  CNH)"
+      "– Documento com foto seu e da criança (RG, CNH ou RNE)"
     ]
   },
   registration_steps: {
-    title: "Depois, vá a qualquer escola ou creche da Prefeitura e procure um funcionário para fazer o cadastro.",
+    title: "Depois, vá a qualquer creche da Prefeitura e procure um funcionário para fazer o cadastro.",
     paragraphs: [
       "A criança será cadastrada na espera de todas creches que ficam até 2 quilômetros de distância do seu endereço.",
       "Ao abrirmos uma nova creche na região, a criança também será incluída automaticamente na espera.",
@@ -47,7 +47,7 @@ export default {
     ]
   },
   registration_list: {
-    title: "Veja as creches e escolas onde você pode fazer o cadastro.",
+    title: "Veja as creches próximas ao seu endereço onde você pode fazer o cadastro",
     paragraphs: ["A lista abaixo mostra as unidades mais próximas do seu endereço."]
   },
   actions: {
@@ -70,7 +70,8 @@ export default {
     check_registration_status: "Acompanhar sua posição na fila",
     current_position_explanation: "A posição atual da criança na fila pode ser vista em outro sistema da Secretaria de Educação",
     check_wait_today: "Ver como está a espera para quem entra na fila hoje",
-    you_can_check_other_address: "Você pode ver a espera também em outros endereços"
+    you_can_check_other_address: "Você pode ver a espera também em outros endereços",
+    start_now: "Começe agora"
   },
   routes: {
     privacy: "/privacidade",

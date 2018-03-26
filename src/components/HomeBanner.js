@@ -6,15 +6,14 @@ export class HomeBanner extends React.Component {
     let paragraphsList;
     if (this.props.paragraphs) {
       paragraphsList = this.props.paragraphs.map((paragraph, i) =>
-        <p key={'p_' + i}>{paragraph}</p>
+        <li key={'p_' + i}>{paragraph}</li>
       );
     }
     return (
       <div className="banner">
         <Logo />
         <hr />
-        <h2>{this.props.title}</h2>
-        <div>{paragraphsList}</div>
+        <ol className="list-ordered">{paragraphsList}</ol>
       </div>
     );
   }

@@ -35,7 +35,6 @@ export class Register extends React.Component {
         />
         <Banner
           title={STRINGS.registration_list.title}
-          paragraphs={STRINGS.registration_list.paragraphs}
         />
         <RegistrationList schools={this.props.location.state.schoolsNearby} />
         <Banner

@@ -9,12 +9,15 @@ import footerDesk from 'assets/images/footer-desk.png';
 export class Footer extends React.Component {
   render() {
     return (
-      <div className="footer">
-        <div className="visible-xs logo-div">
-          <img src={footerMob} />
+      <div className="row footer">
+        <div className="col-xs-6 col-sm-4 logo-div">
+          <div className="logo-div" style={{backgroundImage: `url(${logoUnesco})`}} ></div>
         </div>
-        <div className="hidden-xs logo-div">
-          <img src={footerDesk} />
+        <div className="col-xs-6 col-sm-4 logo-div">
+          <div className="logo-div" style={{backgroundImage: `url(${logoSme})`}} ></div>
+        </div>
+        <div className="col-xs-6 col-xs-push-3 col-sm-push-0 col-sm-4 logo-div">
+          <div className="logo-div" style={{backgroundImage: `url(${logoPatio})`, marginTop: "15px"}} ></div>
         </div>
       </div>
     );

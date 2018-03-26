@@ -9,8 +9,8 @@ export class Home extends React.Component {
   render() {
     return (
       <div>
-        <HomeBanner title={STRINGS.greeting.title} paragraphs={STRINGS.greeting.paragraphs} />
-        <ContinueButton title={STRINGS.actions.continue} subtitle={STRINGS.actions.click_continue} link={STRINGS.routes.check_if_registered} />
+        <HomeBanner paragraphs={STRINGS.greeting.paragraphs} />
+        <ContinueButton title={STRINGS.actions.start_now} subtitle={STRINGS.actions.click_continue} link={STRINGS.routes.check_if_registered} />
         <Footer />
       </div>
     );

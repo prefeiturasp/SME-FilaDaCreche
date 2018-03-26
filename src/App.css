@@ -141,10 +141,30 @@ a {
 .logo-div img {
   width: 100%;
 }
+.logo-div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+}
 .logo-banner {
   background: #852eb9;
+  max-width: 300px;
+  margin: auto;
 }
 .footer {
-  padding: 15px;
-  background: #f4f4f7;
+  margin: 0;
+  padding: 15px 0;
+  background: #5f5863;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 600px;
+}
+.list-ordered {
+  font-size: 16px;
+  -webkit-padding-start: 20px;
+}
+.list-ordered li {
+  margin-bottom: 5px;
 }
