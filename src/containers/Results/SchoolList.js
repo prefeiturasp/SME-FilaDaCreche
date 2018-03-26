@@ -28,7 +28,7 @@ export class SchoolList extends React.Component {
           </div>
           <div className="col-xs-4 text-center">
             <div>
-              <h2 style={{margin: 0}}>{school.wait}</h2>
+              <h2 style={{margin: 0}}>{school.wait > 0 ? school.wait : "0"}</h2>
               <p style={{margin: 0}}>{school.wait == 1 ? "criança" : "crianças"}<br />na fila</p>
             </div>
           </div>

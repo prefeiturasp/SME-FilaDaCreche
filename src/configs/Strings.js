@@ -19,7 +19,7 @@ export default {
   },
   address_input: {
     title: "Qual o endereço da sua casa ou trabalho?",
-    paragraphs: ["Vou procurar creches que fiquem até 2 quilômetros de distância do seu enderço."]
+    paragraphs: ["Vou procurar creches que fiquem até 2 quilômetros de distância do seu endereço."]
   },
   school_list_explanation: {
     paragraphs: [
