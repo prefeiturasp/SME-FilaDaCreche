@@ -1,0 +1,150 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*  */
+body {
+  background: #888;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+    color: #333 !important;
+}
+a:active {
+    color: #333 !important;
+}
+a {
+    color: #333 !important;
+}
+.main {
+  background: #fff;
+  max-width: 600px;
+  min-height: 100vh;
+  padding: 0;
+}
+.margin-bottom-sm {
+  margin-bottom: 15px;
+}
+.banner {
+  background: #852eb9;
+  color: #fff;
+  padding: 30px 15px;
+}
+.banner p {
+  font-size: 16px;
+}
+.default-button {
+  padding: 15px;
+  border-bottom: solid #333 1px;
+  border-top: solid #333 1px;
+  margin-top: -1px;
+}
+.default-button:hover, .default-button:hover .icons {
+  background: #852eb9;
+  color: #fff;
+}
+.default-button h4, .default-button p {
+  margin: 0 0 5px;
+}
+.default-select {
+  height: 70px;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  background: #fff;
+  font-size: 18px;
+}
+.spacer-sm {
+  height: 15px;
+}
+.school-list {
+  margin: 0 15px;
+}
+.school-list-header {
+  border-bottom: solid #333 1px;
+}
+.school-list-header h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.school-list-item {
+  margin-top: 15px;
+  padding-bottom: 5px;
+  border-bottom: solid #333 1px;
+}
+.school-list-item p {
+  margin: 5px 0;
+}
+.sub-banner {
+  margin: 0 15px;
+}
+.icons {
+  color: #333;
+}
+.icons:hover {
+  color: #852eb9;
+}
+.icons-lg {
+  font-size: 2em;
+}
+.icons-div {
+  margin: 15px 0;
+}
+.autocomplete-input {
+  padding: 15px !important;
+  width: 100%;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+#PlacesAutocomplete__autocomplete-container {
+  z-index: 1000;
+}
+.no-pad {
+  padding: 0;
+}
+.titlecase {
+  text-transform: capitalize;
+}
+.logo-div img {
+  width: 100%;
+}
+.logo-banner {
+  background: #852eb9;
+}
+.footer {
+  padding: 15px;
+  background: #f4f4f7;
+}
