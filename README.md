@@ -23,3 +23,6 @@ Your app is ready to be deployed!
 ### `npm run deploy`
 
 Builds and deploys the app to GitHub Pages.
+
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/73b1c40a9707c01deb1e/maintainability)](https://codeclimate.com/github/prefeiturasp/SME-FilaDaCreche/maintainability)
