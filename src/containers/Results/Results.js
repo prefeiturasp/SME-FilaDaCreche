@@ -27,7 +27,8 @@ export class Results extends React.Component {
       schoolsFiltered: null,
       waitListLoaded: false,
       waitListError: null,
-      waitListItems: null
+      waitListItems: null,
+      waitListUpdatedAt: null
     };
   }
 
@@ -121,11 +122,12 @@ export class Results extends React.Component {
             .then(res => res.json())
             .then(
               (result) => {
+                let updatedAt = result.updated_at;
                 let schools = this.joinSchoolsToWaitList(schoolsWithin.features, result, this.props.match.params.groupCode);
-                console.log(schools);
                 this.setState({
                   waitListLoaded: true,
-                  waitListItems: schools
+                  waitListItems: schools,
+                  waitListUpdatedAt: updatedAt
                 });
               },
               (error) => {
@@ -149,6 +151,7 @@ export class Results extends React.Component {
   render() {
     const schoolsNearby = this.state.waitListItems ? this.state.waitListItems : false;
     const numberOfSchools = this.state.waitListItems ? this.state.waitListItems.length : false;
+    const updatedAtMsg = this.state.waitListUpdatedAt ? "* dados atualizados em " + new Date(this.state.waitListUpdatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'}) : false;
     return (
       <div>
         <BackButton />
@@ -157,7 +160,7 @@ export class Results extends React.Component {
         />}
         {this.state.waitListLoaded && <Banner
           title={"Encontrei " + numberOfSchools + " creches perto de " + this.state.geocodedAddress + "."}
-          paragraphs={["Veja abaixo a lista dessas creches, com o número de crianças atualmente* na lista de espera para o " + this.state.groupName + "."]}
+          paragraphs={["Veja abaixo a lista dessas creches, com o número de crianças atualmente* na lista de espera para o " + this.state.groupName + ".", updatedAtMsg]}
         />}
         {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} />}
         <Spacer classSize="spacer-sm" />
