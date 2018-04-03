@@ -34,7 +34,7 @@ export class PreschoolGroup extends React.Component {
             to={{
             pathname: STRINGS.routes.address + '/' + this.state.preschoolGroupCode,
           }}>
-            <DefaultButton title={STRINGS.actions.continue} subtitle={STRINGS.actions.click_continue} />
+            <DefaultButton title={STRINGS.actions.continue} />
           </Link>
       </div>
     );
