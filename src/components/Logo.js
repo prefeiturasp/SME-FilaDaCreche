@@ -5,7 +5,7 @@ export class Logo extends React.Component {
   render() {
     return (
       <div className="logo-banner text-center">
-        <img src={logo} alt="logo" />
+        <object data={logo} type="image/svg+xml"></object>
       </div>
     );
   }
