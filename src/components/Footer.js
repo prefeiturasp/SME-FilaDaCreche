@@ -8,17 +8,14 @@ import footerDesk from 'assets/images/footer-desk.png';
 
 export class Footer extends React.Component {
   render() {
+    let logos = [logoPatio, logoUnesco, logoSme].map((logo, i) =>
+        <div className="col-xs-4 logo-div">
+          <div className="logo-div" style={{backgroundImage: `url(${logo})`}} ></div>
+        </div>
+      );
     return (
       <div className="row footer">
-        <div className="col-xs-4 logo-div">
-          <div className="logo-div" style={{backgroundImage: `url(${logoUnesco})`}} ></div>
-        </div>
-        <div className="col-xs-4 logo-div">
-          <div className="logo-div" style={{backgroundImage: `url(${logoSme})`}} ></div>
-        </div>
-        <div className="col-xs-4 logo-div">
-          <div className="logo-div" style={{backgroundImage: `url(${logoPatio})`, marginTop: "15px"}} ></div>
-        </div>
+        {logos}
       </div>
     );
   }
