@@ -14,7 +14,7 @@ export class Footer extends React.Component {
       {img: logoSme, url: "http://www.capital.sp.gov.br/cidadao/educacao"}
     ]
     let logosList = logos.map((logo, i) =>
-        <div className="col-xs-4 logo-div">
+        <div className="col-xs-4 logo-div" key={"footer_div_" + i}>
           <a href={logo.url} >
             <div className="logo-div" style={{backgroundImage: `url(${logo.img})`}} ></div>
           </a>
