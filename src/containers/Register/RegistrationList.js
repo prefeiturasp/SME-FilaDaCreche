@@ -28,7 +28,7 @@ export class RegistrationList extends React.Component {
               </a>
             </div>}
             <div className="icons-div">
-              <a href={"https://www.google.com/maps/?q=" + school.geometry.coordinates[1] + "," + school.geometry.coordinates[0]} target="_blank">
+              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " São Paulo, SP"} target="_blank">
                 <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />Ver no mapa</p>
               </a>
             </div>
