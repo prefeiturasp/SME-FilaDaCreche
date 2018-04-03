@@ -162,9 +162,9 @@ export class Results extends React.Component {
         />}
         {this.state.waitListLoaded && <Banner
           title={"Encontrei " + numberOfSchools + " creches perto de " + this.state.geocodedAddress + "."}
-          paragraphs={["Veja abaixo a lista das creches num raio de 2 quilômetros, com o número de crianças atualmente* na lista de espera para o " + this.state.groupName + ".", updatedAtMsg]}
+          paragraphs={["Veja abaixo a lista das creches num raio de 2 quilômetros, com o número de crianças atualmente* na lista de espera para o " + this.state.groupName + "."]}
         />}
-        {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} />}
+        {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} updatedAtMsg={updatedAtMsg} />}
         <Spacer classSize="spacer-sm" />
         {this.state.waitListLoaded && <Banner
           title={STRINGS.actions.can_do}
