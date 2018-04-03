@@ -34,7 +34,7 @@ html {
 }
 body {
   background: #888;
-  margin-bottom: 90px;
+  /* margin-bottom: 90px; */
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
@@ -55,7 +55,7 @@ a {
 .main {
   background: #fff;
   max-width: 600px;
-  min-height: calc(100vh - 90px);
+  min-height: 100vh;
   padding: 0;
 }
 .margin-bottom-sm {
@@ -165,7 +165,7 @@ a {
   width: 100%;
   max-width: 600px;
   height: 90px;
-  position: absolute;
+  /* position: absolute; */
 }
 @media screen and (min-width: 500px) {
   .footer {
