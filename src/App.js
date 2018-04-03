@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link, HashRouter } from 'react-router-d
 // import { connect } from 'react-redux'
 import 'App.css';
 
+import { Footer } from "components/Footer";
+
 import { Home } from 'containers/Home/Home';
 import { CheckIfRegistered } from 'containers/CheckIfRegistered/CheckIfRegistered';
 import { IsRegistered } from 'containers/IsRegistered/IsRegistered';
@@ -29,6 +31,7 @@ class App extends Component {
           <Route path={STRINGS.routes.address + "/:groupCode"} component={AddressInput} />
           <Route path={STRINGS.routes.results + "/:groupCode/:geocodedAddressLng/:geocodedAddressLat/:geocodedAddress"} component={Results} />
           <Route path={STRINGS.routes.register + "/:groupCode"} component={Register} />
+          <Footer />
         </div>
       </HashRouter>
     );
