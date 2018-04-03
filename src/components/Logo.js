@@ -6,9 +6,7 @@ export class Logo extends React.Component {
   render() {
     return (
       <div className="logo-banner text-center">
-        <object data={logo} type="image/svg+xml">
-          <img src={logoImg} alt="Fila da Creche - O melhor caminho para sua vaga" />
-        </object>
+        <img src={logoImg} alt="Fila da Creche - O melhor caminho para sua vaga" style={{width: '100%'}}/>
       </div>
     );
   }
