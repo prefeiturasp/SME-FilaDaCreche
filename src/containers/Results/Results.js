@@ -97,6 +97,8 @@ export class Results extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
+    
     fetch(API.schools_all_endpoint)
       .then(res => res.json())
       .then(
@@ -151,7 +153,7 @@ export class Results extends React.Component {
   render() {
     const schoolsNearby = this.state.waitListItems ? this.state.waitListItems : false;
     const numberOfSchools = this.state.waitListItems ? this.state.waitListItems.length : false;
-    const updatedAtMsg = this.state.waitListUpdatedAt ? "* dados atualizados em " + new Date(this.state.waitListUpdatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'}) : false;
+    const updatedAtMsg = this.state.waitListUpdatedAt ? "*dados atualizados em " + new Date(this.state.waitListUpdatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'}) : false;
     return (
       <div>
         <BackButton />
