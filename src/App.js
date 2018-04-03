@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link, HashRouter } from 'react-router-d
 // import { connect } from 'react-redux'
 import 'App.css';
 
+import { Alert } from 'components/Alert';
+
 import { Home } from 'containers/Home/Home';
 import { CheckIfRegistered } from 'containers/CheckIfRegistered/CheckIfRegistered';
 import { IsRegistered } from 'containers/IsRegistered/IsRegistered';
@@ -21,6 +23,7 @@ class App extends Component {
     return (
       <HashRouter>
         <div>
+          <Alert />
           <Route exact path="/" component={Home} />
           <Route path={STRINGS.routes.check_if_registered} component={CheckIfRegistered} />
           <Route path={STRINGS.routes.is_registered} component={IsRegistered} />
