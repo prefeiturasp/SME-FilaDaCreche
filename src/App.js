@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, HashRouter } from 'react-router-d
 import 'App.css';
 
 import { Alert } from 'components/Alert';
+import GoogleAnalytics from 'components/GoogleAnalytics';
 
 import { Home } from 'containers/Home/Home';
 import { CheckIfRegistered } from 'containers/CheckIfRegistered/CheckIfRegistered';
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path={STRINGS.routes.address + "/:groupCode"} component={AddressInput} />
           <Route path={STRINGS.routes.results + "/:groupCode/:geocodedAddressLng/:geocodedAddressLat/:geocodedAddress"} component={Results} />
           <Route path={STRINGS.routes.register + "/:groupCode"} component={Register} />
+          <GoogleAnalytics />
         </div>
       </HashRouter>
     );

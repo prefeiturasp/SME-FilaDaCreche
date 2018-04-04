@@ -9,5 +9,6 @@ export default {
       {cd_ciclo_ensino:"2", cd_faixa:"5", dc_serie_ensino:"Infantil I", serie:"23", mes_min:"", mes_max:""},
       {cd_ciclo_ensino:"2", cd_faixa:"6", dc_serie_ensino:"Infantil II", serie:"25", mes_min:"", mes_max:""}
   ],
-  months_list: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+  months_list: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+  ga_tracking_id: process.env.REACT_APP_GA_TRACKING_ID
 }
