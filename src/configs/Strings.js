@@ -1,6 +1,6 @@
 export default {
   greeting: {
-    title: "Olá, seja bem-  vindo!",
+    title: "Olá, seja bem-vindo!",
     paragraphs: [
       "Descubra como anda a fila na sua região.",
       "Teste mais de um endereço (casa, trabalho).",
@@ -59,7 +59,7 @@ export default {
     register: "Cadastrar na fila",
     how_to_register: "Veja como se cadastrar na fila de espera",
     compare_address: "Comparar com outro endereço",
-    see_wait_near: "Veja a espera nas crehes perto de outro endereço",
+    see_wait_near: "Veja a espera nas creches perto de outro endereço",
     back_to_start: "Voltar para o começo",
     search_other_registration: "Procurar outros locais para cadastro",
     see_schools_near: "Veja creches e escolas perto de outro endereço",
@@ -71,7 +71,7 @@ export default {
     current_position_explanation: "A posição atual da criança na fila pode ser vista em outro sistema da Secretaria de Educação",
     check_wait_today: "Ver como está a espera para quem entra na fila hoje",
     you_can_check_other_address: "Você pode ver a espera também em outros endereços",
-    start_now: "Começe agora"
+    start_now: "Comece agora"
   },
   routes: {
     privacy: "/privacidade",
