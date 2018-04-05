@@ -28,7 +28,8 @@ export class Results extends React.Component {
       waitListLoaded: false,
       waitListError: null,
       waitListItems: null,
-      waitListUpdatedAt: null
+      waitListUpdatedAt: null,
+      waitListTotal: null
     };
   }
 
@@ -126,10 +127,15 @@ export class Results extends React.Component {
               (result) => {
                 let updatedAt = result.updated_at;
                 let schools = this.joinSchoolsToWaitList(schoolsWithin.features, result, this.props.match.params.groupCode);
+                let waitListTotal = 0;
+                for (var i = 0; i < schools.length; i++) {
+                  waitListTotal += schools[i].wait;
+                }
                 this.setState({
                   waitListLoaded: true,
                   waitListItems: schools,
-                  waitListUpdatedAt: updatedAt
+                  waitListUpdatedAt: updatedAt,
+                  waitListTotal: waitListTotal
                 });
               },
               (error) => {
@@ -153,6 +159,7 @@ export class Results extends React.Component {
   render() {
     const schoolsNearby = this.state.waitListItems ? this.state.waitListItems : false;
     const numberOfSchools = this.state.waitListItems ? this.state.waitListItems.length : false;
+    const waitListTotal = this.state.waitListTotal ? this.state.waitListTotal : false;
     const updatedAtMsg = this.state.waitListUpdatedAt ? "* Dados atualizados em " + new Date(this.state.waitListUpdatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'}) : false;
     return (
       <div>
@@ -161,8 +168,8 @@ export class Results extends React.Component {
           title={STRINGS.actions.loading_results}
         />}
         {this.state.waitListLoaded && <Banner
-          title={"Encontrei " + numberOfSchools + " creches perto de " + this.state.geocodedAddress + "."}
-          paragraphs={["Veja abaixo a lista das creches num raio de 2 quilômetros, com o número de crianças atualmente* na lista de espera para o " + this.state.groupName + "."]}
+          title={"Há " + waitListTotal + " crianças na fila do " + this.state.groupName + " a serem distribuídas nas " + numberOfSchools + " creches perto de " + this.state.geocodedAddress + "."}
+          paragraphs={["Veja abaixo a lista das creches num raio de 2 quilômetros. Estamos trabalhando para obter o número preciso da fila por creche e iremos atualizar esse dado em breve."]}
         />}
         {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} updatedAtMsg={updatedAtMsg} />}
         <Spacer classSize="spacer-sm" />

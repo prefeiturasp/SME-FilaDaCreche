@@ -5,6 +5,13 @@ import STRINGS from 'configs/Strings';
 import convertKilometerToMeter from 'utils/convertKilometerToMeter';
 import toTitleCase from 'utils/toTitleCase';
 
+import fontawesome from '@fortawesome/fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faPhone from '@fortawesome/fontawesome-free-solid/faPhone'
+import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
+
+fontawesome.library.add(faPhone, faMapMarkerAlt)
+
 export class SchoolList extends React.Component {
   constructor(props) {
     super(props);
@@ -20,16 +27,22 @@ export class SchoolList extends React.Component {
     if (schools) {
       schoolList = schools.map((school, i) =>
         <div className={"row school-list-item vertical-align"} key={'school_' + i}>
-          <div className="col-xs-8">
+          <div className="col-xs-12">
             <h4 style={{margin: 0}}>{school.properties.nome}</h4>
             <p>{toTitleCase(school.properties.end)}</p>
-            <p> Crianças no {this.props.groupName}: {school.mat}</p>
+            <p>Crianças atualmente matriculadas no {this.props.groupName}: {school.mat}</p>
             <p>{convertKilometerToMeter(school.distance)} metros</p>
           </div>
-          <div className="col-xs-4 text-center">
-            <div>
-              <h2 style={{margin: 0}}>{school.wait > 0 ? school.wait : "0"}</h2>
-              <p style={{margin: 0}}>{school.wait == 1 ? "criança" : "crianças"}<br />na fila</p>
+          <div className="col-xs-4">
+            {school.properties.ct && <div className="icon-div">
+              <a href={"tel:" + school.properties.ct[0]}>
+                <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />Ligar</p>
+              </a>
+            </div>}
+            <div className="icons-div">
+              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " São Paulo, SP"} target="_blank">
+                <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />Ver no mapa</p>
+              </a>
             </div>
           </div>
         </div>
@@ -53,9 +66,6 @@ export class SchoolList extends React.Component {
           <div className="row school-list-header">
             <div className="col-xs-8">
               <h5>Creche</h5>
-            </div>
-            <div className="col-xs-4 text-center">
-              <h5>Crianças na fila</h5>
             </div>
           </div>
           {this.generateSchoolList(this.state.schoolListPaginated)}
