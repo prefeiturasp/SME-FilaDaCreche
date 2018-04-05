@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import STRINGS from 'configs/Strings';
 import { ContinueButton } from "components/ContinueButton";
 import { HomeBanner } from "components/HomeBanner";
+import { SubBanner } from "components/SubBanner";
 import { Logo } from "components/Logo";
 import { Footer } from "components/Footer";
 
@@ -10,7 +11,10 @@ export class Home extends React.Component {
     return (
       <div>
         <HomeBanner paragraphs={STRINGS.greeting.paragraphs} />
-        <ContinueButton title={STRINGS.actions.start_now} subtitle={STRINGS.actions.click_continue} link={STRINGS.routes.check_if_registered} />
+        <SubBanner
+          title="Ops!"
+          paragraphs={["Recebemos um grande número de acessos e estamos enfrentando dificuldades técnicas. Esta ferramenta está em fase de testes e vai ser aprimorada. Aguarde um pouquinho que voltamos já!"]}
+        />
         <Footer />
       </div>
     );
