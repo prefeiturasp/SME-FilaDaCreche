@@ -1,4 +1,5 @@
 import React from 'react';
+import GLOBALS from 'configs/MainConfigs';
 import logoUnesco from 'assets/images/logo-unesco.png';
 import logoSme from 'assets/images/logo-sme.png';
 import logoPatio from 'assets/images/logo-patio.png';
@@ -9,9 +10,9 @@ import footerDesk from 'assets/images/footer-desk.png';
 export class Footer extends React.Component {
   render() {
     let logos = [
-      {img: logoPatio, url: "http://patiodigital.prefeitura.sp.gov.br/"},
-      {img: logoUnesco, url: "http://www.unesco.org/new/pt/brasilia"},
-      {img: logoSme, url: "http://www.capital.sp.gov.br/cidadao/educacao"}
+      {img: logoPatio, url: GLOBALS.url_patio},
+      {img: logoUnesco, url: GLOBALS.url_unesco},
+      {img: logoSme, url: GLOBALS.url_sme}
     ]
     let logosList = logos.map((logo, i) =>
         <div className="col-xs-4 logo-div" key={"footer_div_" + i}>

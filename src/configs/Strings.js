@@ -29,6 +29,16 @@ export default {
     title: "Qual o endereço da sua casa ou trabalho?",
     paragraphs: ["Vou procurar creches que fiquem até 2 quilômetros de distância do seu endereço."]
   },
+  results: {
+    total_wait_message: function (waitListTotal, groupName, numberOfSchools, address) {
+      return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`
+    },
+    see_list_below: "Veja abaixo a lista das creches num raio de 2 quilômetros. Estamos trabalhando para obter o número preciso da fila por creche e iremos atualizar esse dado em breve.",
+    data_updated_at: function (dateString) {
+      let formattedDate = new Date(dateString).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
+      return `* Dados atualizados em ${formattedDate}`;
+    }
+  },
   school_list_explanation: {
     paragraphs: [
       "Ao cadastrar a criança na fila, ela vai ficar na espera de todas as creches da lista acima, e vai ser chamada na que liberar vagas primeiro.",
@@ -79,11 +89,17 @@ export default {
     current_position_explanation: "A posição atual da criança na fila pode ser vista em outro sistema da Secretaria de Educação",
     check_wait_today: "Ver como está a espera para quem entra na fila hoje",
     you_can_check_other_address: "Você pode ver a espera também em outros endereços",
-    start_now: "Comece agora"
+    start_now: "Comece agora",
+    see_on_map: "Ver no mapa",
+    call: "Ligar",
+    back: "Voltar"
   },
   messages: {
     month_of_birth: "Mês de nascimento",
-    year_of_birth: "Ano de nascimento"
+    year_of_birth: "Ano de nascimento",
+    phone: "Telefone",
+    meters: "metros",
+    daycare: "Creche"
   },
   routes: {
     privacy: "/privacidade",
@@ -95,5 +111,8 @@ export default {
     address: "/endereco",
     results: "/resultados",
     register: "/cadastrar"
+  },
+  site: {
+    tag_line: "Fila da Creche - O melhor caminho para sua vaga"
   }
 }

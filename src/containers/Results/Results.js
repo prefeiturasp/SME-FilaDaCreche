@@ -35,17 +35,6 @@ export class Results extends React.Component {
 
   joinSchoolsToWaitList(schools, waitList, groupCode) {
     schools.forEach(function(school) {
-      // var result = waitList.filter(function(wait) {
-          // return wait.cod == school.properties.cod;
-      // });
-
-      // school.wait = {};
-      // school.wait["1"] = (result[0] !== undefined) ? result[0]["1"] : null;
-      // school.wait["4"] = (result[0] !== undefined) ? result[0]["4"] : null;
-      // school.wait["27"] = (result[0] !== undefined) ? result[0]["27"] : null;
-      // school.wait["28"] = (result[0] !== undefined) ? result[0]["28"] : null;
-
-      // school.wait = (result[0] !== undefined) ? result[0][groupCode] : null;
       let wait = waitList[school.properties.cod];
       if (wait) {
         school.wait = wait["dem_" + groupCode];
@@ -105,6 +94,7 @@ export class Results extends React.Component {
       .then(
         (result) => {
           var schoolsFiltered = result.features.filter(function(school) {
+              // FIXME: move type codes to MainConfigs
               return school.properties.tipo_cd == "2" || school.properties.tipo_cd == "10" || school.properties.tipo_cd == "11" || school.properties.tipo_cd == "12" || school.properties.tipo_cd == "17" || school.properties.tipo_cd == "18" || school.properties.tipo_cd == "28"
           });
           result.features = schoolsFiltered;
@@ -160,7 +150,7 @@ export class Results extends React.Component {
     const schoolsNearby = this.state.waitListItems ? this.state.waitListItems : false;
     const numberOfSchools = this.state.waitListItems ? this.state.waitListItems.length : false;
     const waitListTotal = this.state.waitListTotal ? this.state.waitListTotal : false;
-    const updatedAtMsg = this.state.waitListUpdatedAt ? "* Dados atualizados em " + new Date(this.state.waitListUpdatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'}) : false;
+    const updatedAtMsg = this.state.waitListUpdatedAt ? STRINGS.results.data_updated_at(this.state.waitListUpdatedAt) : false;
     return (
       <div>
         <BackButton />
@@ -168,8 +158,8 @@ export class Results extends React.Component {
           title={STRINGS.actions.loading_results}
         />}
         {this.state.waitListLoaded && <Banner
-          title={"Há " + waitListTotal + " crianças na fila do " + this.state.groupName + " a serem distribuídas nas " + numberOfSchools + " creches perto de " + this.state.geocodedAddress + "."}
-          paragraphs={["Veja abaixo a lista das creches num raio de 2 quilômetros. Estamos trabalhando para obter o número preciso da fila por creche e iremos atualizar esse dado em breve."]}
+          title={STRINGS.results.total_wait_message(waitListTotal, this.state.groupName, numberOfSchools, this.state.geocodedAddress)}
+          paragraphs={[STRINGS.results.see_list_below]}
         />}
         {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} updatedAtMsg={updatedAtMsg} />}
         <Spacer classSize="spacer-sm" />

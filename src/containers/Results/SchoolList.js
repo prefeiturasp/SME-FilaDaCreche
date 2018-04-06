@@ -2,6 +2,7 @@ import React from 'react'
 import { DefaultButton } from "components/DefaultButton";
 import { BrowserRouter as Link } from 'react-router-dom';
 import STRINGS from 'configs/Strings';
+import GLOBALS from 'configs/MainConfigs';
 import convertKilometerToMeter from 'utils/convertKilometerToMeter';
 import toTitleCase from 'utils/toTitleCase';
 
@@ -31,17 +32,17 @@ export class SchoolList extends React.Component {
             <h4 style={{margin: 0}}>{school.properties.nome}</h4>
             <p>{toTitleCase(school.properties.end)}</p>
             <p>Crianças atualmente matriculadas no {this.props.groupName}: {school.mat}</p>
-            <p>{convertKilometerToMeter(school.distance)} metros</p>
+            <p>{convertKilometerToMeter(school.distance)} {STRINGS.messages.meters}</p>
           </div>
           <div className="col-xs-4">
             {school.properties.ct && <div className="icon-div">
               <a href={"tel:" + school.properties.ct[0]}>
-                <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />Ligar</p>
+                <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.call}</p>
               </a>
             </div>}
             <div className="icons-div">
-              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " São Paulo, SP"} target="_blank">
-                <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />Ver no mapa</p>
+              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " " + GLOBALS.city_state} target="_blank">
+                <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.see_on_map}</p>
               </a>
             </div>
           </div>
@@ -65,7 +66,7 @@ export class SchoolList extends React.Component {
         <div className="school-list">
           <div className="row school-list-header">
             <div className="col-xs-8">
-              <h5>Creche</h5>
+              <h5>{STRINGS.messages.daycare}</h5>
             </div>
           </div>
           {this.generateSchoolList(this.state.schoolListPaginated)}

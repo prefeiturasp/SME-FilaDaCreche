@@ -1,4 +1,6 @@
 export default {
+  city_center: {lat: -23.550406, lon: -46.633994},
+  city_state: "São Paulo, SP",
   buffer_distance: 2.2, // the initial buffer distance for calculating school proximity
   distance_units: "kilometers",
   current_year: new Date().getFullYear(),
@@ -16,5 +18,8 @@ export default {
     ]
   },
   months_list: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-  ga_tracking_id: process.env.REACT_APP_GA_TRACKING_ID
+  ga_tracking_id: process.env.REACT_APP_GA_TRACKING_ID,
+  url_patio: "http://patiodigital.prefeitura.sp.gov.br",
+  url_unesco: "http://www.unesco.org/new/pt/brasilia",
+  url_sme: "http://www.capital.sp.gov.br/cidadao/educacao"
 }

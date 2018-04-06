@@ -1,4 +1,6 @@
 import React from 'react';
+import STRINGS from 'configs/Strings';
+import GLOBALS from 'configs/MainConfigs';
 import convertKilometerToMeter from 'utils/convertKilometerToMeter';
 import toTitleCase from 'utils/toTitleCase';
 import fontawesome from '@fortawesome/fontawesome'
@@ -18,18 +20,18 @@ export class RegistrationList extends React.Component {
             <h4>{school.properties.nome}</h4>
             <p>{school.properties.tipo}</p>
             <p>{toTitleCase(school.properties.end)}</p>
-            <p>{convertKilometerToMeter(school.distance)} metros</p>
-            {school.properties.ct && <p>Telefone: {school.properties.ct[0]}</p>}
+            <p>{convertKilometerToMeter(school.distance)} {STRINGS.messages.meters}</p>
+            {school.properties.ct && <p>{STRINGS.messages.phone}: {school.properties.ct[0]}</p>}
           </div>
           <div className="col-xs-4">
             {school.properties.ct && <div className="icon-div">
               <a href={"tel:" + school.properties.ct[0]}>
-                <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />Ligar</p>
+                <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.call}</p>
               </a>
             </div>}
             <div className="icons-div">
-              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " São Paulo, SP"} target="_blank">
-                <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />Ver no mapa</p>
+              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " " + GLOBALS.city_state} target="_blank">
+                <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.see_on_map}</p>
               </a>
             </div>
           </div>

@@ -1,9 +1,9 @@
 /*global google*/
 
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
-import { DefaultButton } from "components/DefaultButton";
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import { DefaultButton } from 'components/DefaultButton';
 import GLOBALS from 'configs/MainConfigs';
 import STRINGS from 'configs/Strings';
 
@@ -42,7 +42,7 @@ export class AddressForm extends React.Component {
 
   render() {
     const placesAutocompleteOptions = {
-      location: new google.maps.LatLng(-23.550406, -46.633994),
+      location: new google.maps.LatLng(GLOBALS.city_center.lat, GLOBALS.city_center.lon),
       radius: 20000,
       types: ['address']
     };
@@ -72,5 +72,3 @@ export class AddressForm extends React.Component {
     )
   }
 }
-
-// export default AddressForm
