@@ -5,15 +5,15 @@ import { Banner } from 'components/Banner';
 import { DefaultButton } from 'components/DefaultButton';
 import STRINGS from 'configs/Strings';
 import calculatePreschoolGroup from 'utils/calculatePreschoolGroup';
-import composeAgeMsg from 'utils/composeAgeMsg';
+import composeDateOfBirthMsg from 'utils/composeDateOfBirthMsg';
 
 export class PreschoolGroup extends React.Component {
   constructor(props) {
     super(props);
-    const ageMonths = parseInt(this.props.match.params.ageMonths);
-    const preschoolGroup = calculatePreschoolGroup(ageMonths);
+    const monthOfBirth = parseInt(this.props.match.params.monthOfBirth);
+    const yearOfBirth = parseInt(this.props.match.params.yearOfBirth);
+    const preschoolGroup = calculatePreschoolGroup(monthOfBirth, yearOfBirth);
     this.state = {
-      ageMonths: ageMonths,
       preschoolGroup: preschoolGroup,
       preschoolGroupName: preschoolGroup.dc_serie_ensino,
       preschoolGroupCode: preschoolGroup.serie
@@ -21,9 +21,9 @@ export class PreschoolGroup extends React.Component {
   }
 
   render() {
-    const ageMsg = composeAgeMsg(this.state.ageMonths);
+    const ageMsg = composeDateOfBirthMsg(this.props.match.params.monthOfBirth, this.props.match.params.yearOfBirth);
     const preschoolGroupName = this.state.preschoolGroupName;
-    const paragraphs = preschoolGroupName ? ["Isso quer dizer que ela deve estar no grupo " + preschoolGroupName + " da creche."] : []
+    const paragraphs = preschoolGroupName ? [STRINGS.is_in_group_message(preschoolGroupName)] : []
     return (
       <div>
         <BackButton />

@@ -15,7 +15,15 @@ export default {
   },
   date_of_birth: {
     title: "Qual o mês e ano de nascimento da criança?",
-    paragraphs: ["Assim posso encontrar o grupo certo para ela na creche."]
+    paragraphs: ["Assim posso encontrar o grupo certo para ela na creche."],
+    not_in_preschool_age: "A criança não está em idade de creche. Tente para outra idade.",
+    error_calculating_age: "Houve um erro ao calcular a idade da criança. Por favor tente de novo."
+  },
+  date_of_birth_message: function (month, year) {
+    return `A criança nasceu em ${month} de ${year}`;
+  },
+  is_in_group_message: function (groupName) {
+    return `Pela idade, ela deveria estar no grupo ${groupName} da creche.`
   },
   address_input: {
     title: "Qual o endereço da sua casa ou trabalho?",
@@ -72,6 +80,10 @@ export default {
     check_wait_today: "Ver como está a espera para quem entra na fila hoje",
     you_can_check_other_address: "Você pode ver a espera também em outros endereços",
     start_now: "Comece agora"
+  },
+  messages: {
+    month_of_birth: "Mês de nascimento",
+    year_of_birth: "Ano de nascimento"
   },
   routes: {
     privacy: "/privacidade",

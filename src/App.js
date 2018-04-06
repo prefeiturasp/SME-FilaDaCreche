@@ -29,7 +29,7 @@ class App extends Component {
           <Route path={STRINGS.routes.check_if_registered} component={CheckIfRegistered} />
           <Route path={STRINGS.routes.is_registered} component={IsRegistered} />
           <Route path={STRINGS.routes.date_of_birth} component={DateOfBirthForm} />
-          <Route path={STRINGS.routes.preschool_group + "/:ageMonths"} component={PreschoolGroup} />
+          <Route path={STRINGS.routes.preschool_group + "/:monthOfBirth/:yearOfBirth"} component={PreschoolGroup} />
           <Route path={STRINGS.routes.address + "/:groupCode"} component={AddressInput} />
           <Route path={STRINGS.routes.results + "/:groupCode/:geocodedAddressLng/:geocodedAddressLat/:geocodedAddress"} component={Results} />
           <Route path={STRINGS.routes.register + "/:groupCode"} component={Register} />
