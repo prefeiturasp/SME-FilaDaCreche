@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { buffer as TurfBuffer } from '@turf/turf';
+import { pointsWithinPolygon as TurfWithin } from '@turf/turf';
+import { distance as TurfDistance } from '@turf/turf';
+import { point as TurfPoint } from '@turf/turf';
 import STRINGS from 'configs/Strings';
 import GLOBALS from 'configs/MainConfigs';
 import API from 'configs/Api';
@@ -73,14 +77,14 @@ export class Results extends React.Component {
   }
 
   findSchoolsInRadius(userAddressLng, userAddressLat, schools) {
-    const point = window.turf.point([userAddressLng, userAddressLat]);
-    const buffered = window.turf.buffer(point, GLOBALS.buffer_distance, {units: GLOBALS.distance_units});
-    const schoolsWithin = window.turf.pointsWithinPolygon(schools, buffered);
+    const point = TurfPoint([userAddressLng, userAddressLat]);
+    const buffered = TurfBuffer(point, GLOBALS.buffer_distance, {units: GLOBALS.distance_units});
+    const schoolsWithin = TurfWithin(schools, buffered);
 
     schoolsWithin.features.forEach(function(school) {
       let from = point;
-      let to = window.turf.point([school.geometry.coordinates[0], school.geometry.coordinates[1]]);
-      let distance = window.turf.distance(from, to, {units: GLOBALS.distance_units});
+      let to = TurfPoint([school.geometry.coordinates[0], school.geometry.coordinates[1]]);
+      let distance = TurfDistance(from, to, {units: GLOBALS.distance_units});
       school.distance = distance;
     });
     return schoolsWithin;
