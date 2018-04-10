@@ -1,5 +1,9 @@
 export default {
   city_center: {lat: -23.550406, lon: -46.633994},
+  city_bbox_w: -46.826251587155276,
+  city_bbox_s: -24.008125453472775,
+  city_bbox_e: -46.365099600379388,
+  city_bbox_n: -23.356585227755030,
   city_state: "São Paulo, SP",
   buffer_distance: 2.2, // the initial buffer distance for calculating school proximity
   distance_units: "kilometers",
