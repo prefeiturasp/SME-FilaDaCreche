@@ -14,6 +14,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+### `npm test`
+
+Runs tests from `.test.js` files.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
@@ -25,6 +29,3 @@ Your app is ready to be deployed!
 ### `npm run deploy`
 
 Builds and deploys the app to GitHub Pages.
-
-
-
