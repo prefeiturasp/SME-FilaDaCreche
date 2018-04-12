@@ -1,0 +1,20 @@
+version: '2.1'
+services:
+  sme-fila-creche:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: smefilacreche
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_PATH=src/
+      - REACT_APP_GOOGLE_API_KEY=api_key_here
+      - REACT_APP_SCHOOLS_ALL_ENDPOINT=url_to_endpoint_here
+      - REACT_APP_SCHOOLS_WAIT_ALL_ENDPOINT=url_to_endpoint_here
+      - REACT_APP_GA_TRACKING_ID='google_analytics_tracking_id'
+    volumes:
+      - .:/app
+    entrypoint:
+      - npm
+      - start
