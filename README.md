@@ -1,3 +1,9 @@
+
+<a href="url"><img src="http://patiodigital.prefeitura.sp.gov.br/wp-content/uploads/sites/4/2018/04/logo_fila.jpg" align="left" height="100" width="200" ></a>
+
+Para que os pais e famílias possam se programar e acompanhar a geração de vagas na educação infantil, a Secretaria Municipal de Educação, por meio da iniciativa de governo aberto Pátio Digital, lançou ferramenta online inédita que permite saber como está a espera de acordo com o endereço fornecido e a faixa etária informada. Veja aqui [filadacreche.sme.prefeitura.sp.gov.br](filadacreche.sme.prefeitura.sp.gov.br).
+
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/73b1c40a9707c01deb1e/maintainability)](https://codeclimate.com/github/prefeiturasp/SME-FilaDaCreche/maintainability)
 
 # SME-FilaDaCreche
