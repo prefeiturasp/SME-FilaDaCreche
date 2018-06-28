@@ -20,23 +20,14 @@ export class AddressForm extends React.Component {
 
     geocodeByAddress(this.state.inputAddress)
       .then(results => {
-        // console.log('results', results)
         this.setState({ geocodedAddress: results[0].formatted_address })
         getLatLng(results[0])
           .then(({ lat, lng }) => {
             this.setState({ geocodedAddressLat: lat, geocodedAddressLng: lng })
             this.props.onAddressChange(this.state.inputAddress, this.state.geocodedAddress, this.state.geocodedAddressLat, this.state.geocodedAddressLng)
-            // console.log('geocodedAddressLatLng', this.state.geocodedAddressLat, this.state.geocodedAddressLng)
           })
           .catch(error => console.error('Error', error))
-        // console.log('geocodedAddress', this.state.geocodedAddress)
-        // console.log('inputAddress', this.state.inputAddress)
       })
-      // .then(results => getLatLng(results[0]))
-      // .then(latLng => {
-      //   this.setState({ geocodedAddressLatLng: latLng })
-      //   console.log('geocodedAddressLatLng', this.state.geocodedAddressLatLng)
-      // })
       .catch(error => console.error('Error', error))
   }
 

@@ -22,26 +22,25 @@ export class SchoolList extends React.Component {
     };
     this.handleSeeMore = this.handleSeeMore.bind(this)
   }
-
   generateSchoolList(schools) {
     let schoolList;
     if (schools) {
       schoolList = schools.map((school, i) =>
         <div className={"row school-list-item vertical-align"} key={'school_' + i}>
           <div className="col-xs-12">
-            <h4 style={{margin: 0}}>{school.properties.nome}</h4>
-            <p>{toTitleCase(school.properties.end)}</p>
-            <p>Crianças atualmente matriculadas no {this.props.groupName}: {school.mat}</p>
+            <h4 style={{margin: 0}}>{school.nm_unidade_educacao}</h4>
+            <p>{toTitleCase(school.endereco_completo)}</p>
+            <p>Crianças atualmente matriculadas no {this.props.groupName}: {school['vagas_cd_serie_' + this.props.groupCode]}</p>
             <p>{convertKilometerToMeter(school.distance)} {STRINGS.messages.meters}</p>
           </div>
           <div className="col-xs-4">
-            {school.properties.ct && <div className="icon-div">
-              <a href={"tel:" + school.properties.ct[0]}>
+            {school.telefones && <div className="icon-div">
+              <a href={"tel:" + school.telefones[0]}>
                 <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.call}</p>
               </a>
             </div>}
             <div className="icons-div">
-              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.properties.end + " " + GLOBALS.city_state} target="_blank">
+              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.endereco_completo + " " + GLOBALS.city_state} target="_blank">
                 <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.see_on_map}</p>
               </a>
             </div>

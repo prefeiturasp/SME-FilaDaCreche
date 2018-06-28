@@ -1,4 +1,4 @@
 export default {
-  schools_all_endpoint: process.env.REACT_APP_SCHOOLS_ALL_ENDPOINT,
-  schools_wait_all_endpoint: process.env.REACT_APP_SCHOOLS_WAIT_ALL_ENDPOINT
+  schools_api_endpoint: process.env.REACT_APP_SCHOOLS_API_ENDPOINT,
+  schools_api_endpoint_wait: `${process.env.REACT_APP_SCHOOLS_API_ENDPOINT}/schools/radius/wait`,
 }
