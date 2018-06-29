@@ -41,8 +41,7 @@ export class Results extends React.Component {
           this.setState({
             schoolsLoaded: true,
             waitListLoaded: true,
-            // FIXME: need updatedAt
-            waitListUpdatedAt: undefined,
+            waitListUpdatedAt: result.results.wait_updated_at,
             waitListTotal: result.results.wait,
             schoolsNearby: result.results.schools,
           });
