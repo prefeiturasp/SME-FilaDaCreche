@@ -53,7 +53,8 @@ export default {
     title: "Você vai precisar destes documentos:",
     paragraphs: [
       "– Comprovante de residência com CEP (pode ser uma conta de água, luz, telefone ou gás)",
-      "– Documento com foto seu e da criança (RG, CNH ou RNE)"
+      "– Um documento seu com foto (RG, CNH ou RNE)",
+      "– Um documento da criança (RG, RNE ou Certidão de Nascimento)"
     ]
   },
   registration_steps: {
