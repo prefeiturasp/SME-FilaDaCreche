@@ -33,7 +33,6 @@ export class Results extends React.Component {
     window.scrollTo(0, 0);
 
     let reqUrl = `${API.schools_api_endpoint_wait}/${this.state.geocodedAddressLng}/${this.state.geocodedAddressLat}/${this.state.groupCode}`;
-    console.log(reqUrl);
     fetch(reqUrl)
       .then(res => res.json())
       .then(
