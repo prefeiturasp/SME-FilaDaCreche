@@ -5,7 +5,6 @@ import { SubBanner } from "components/SubBanner";
 import STRINGS from 'configs/Strings';
 import GLOBALS from 'configs/MainConfigs';
 import calculatePreschoolGroup from 'utils/calculatePreschoolGroup';
-import monthDiff from 'utils/monthDiff';
 import generateMonthsOptions from 'utils/generateMonthsOptions';
 import generateYearsOptions from 'utils/generateYearsOptions';
 import composeDateOfBirthMsg from 'utils/composeDateOfBirthMsg';
@@ -68,7 +67,6 @@ export class SelectDate extends React.Component {
   render() {
     const dateSelected = (this.state.monthOfBirth && this.state.yearOfBirth) ? true : false;
     const preeschoolCalcError = this.state.preeschoolCalcError;
-    const preschoolGroupName = this.state.preschoolGroupName;
     return (
       <div>
         <select className="default-select" id="month-of-birth" value={this.state.monthOfBirth} onChange={this.setMonth}>

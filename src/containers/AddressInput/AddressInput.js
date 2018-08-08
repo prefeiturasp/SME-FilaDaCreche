@@ -26,10 +26,6 @@ export class AddressInput extends React.Component {
   }
 
   render() {
-    const inputAddress = this.state.inputAddress;
-    const geocodedAddress = this.state.geocodedAddress;
-    const geocodedAddressLat = this.state.geocodedAddressLat;
-    const geocodedAddressLng = this.state.geocodedAddressLng;
     return (
       <div>
         <BackButton />
