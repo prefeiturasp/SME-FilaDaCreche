@@ -8,10 +8,10 @@ import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 fontawesome.library.add(faChevronLeft)
 
 const BackButton = (props, context) => (
-  <button
-  className="form-control"
-  onClick={context.router.history.goBack}>
-  <span className=""><FontAwesomeIcon icon="chevron-left" size="lg" className="icons" /></span>&nbsp;{STRINGS.actions.back}
+  <button className="form-control" onClick={context.router.history.goBack}>
+    <span className="">
+      <FontAwesomeIcon icon="chevron-left" size="lg" className="icons" />
+    </span>&nbsp;{STRINGS.actions.back}
   </button>
 );
 
