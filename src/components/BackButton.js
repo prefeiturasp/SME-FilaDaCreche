@@ -7,7 +7,7 @@ import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 
 fontawesome.library.add(faChevronLeft)
 
-const BackButton = (props, context) => (
+export const BackButton = (props, context) => (
   <button className="form-control" onClick={context.router.history.goBack}>
     <span className="">
       <FontAwesomeIcon icon="chevron-left" size="lg" className="icons" />
@@ -18,5 +18,3 @@ const BackButton = (props, context) => (
 BackButton.contextTypes = {
   router: PropTypes.object
 };
-
-export { BackButton };
