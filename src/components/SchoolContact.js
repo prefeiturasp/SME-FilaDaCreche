@@ -10,7 +10,7 @@ import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
 
 fontawesome.library.add(faPhone, faMapMarkerAlt)
 
-const SchoolContact = ({school}) => (
+export const SchoolContact = ({school}) => (
   <React.Fragment>
     {school.telefones && <div className="icon-div">
       <a href={"tel:" + school.telefones[0]}>
@@ -28,5 +28,3 @@ const SchoolContact = ({school}) => (
 SchoolContact.propTypes = {
   school: PropTypes.object
 };
-
-export { SchoolContact };
