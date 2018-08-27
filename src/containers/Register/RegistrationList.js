@@ -1,14 +1,8 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import GLOBALS from 'configs/MainConfigs';
 import convertKilometerToMeter from 'utils/convertKilometerToMeter';
 import toTitleCase from 'utils/toTitleCase';
-import fontawesome from '@fortawesome/fontawesome'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faPhone from '@fortawesome/fontawesome-free-solid/faPhone'
-import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
-
-fontawesome.library.add(faPhone, faMapMarkerAlt)
+import { SchoolContact } from "components/SchoolContact";
+import STRINGS from 'configs/Strings';
 
 // FIXME: this will probably require another request to the api with all schools in radius, not just those that have slots
 export class RegistrationList extends React.Component {
@@ -25,16 +19,7 @@ export class RegistrationList extends React.Component {
             {school.telefones && <p>{STRINGS.messages.phone}: {school.telefones[0]}</p>}
           </div>
           <div className="col-xs-4">
-            {school.telefones && <div className="icon-div">
-              <a href={"tel:" + school.telefones[0]}>
-                <p className="text-center"><FontAwesomeIcon icon="phone" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.call}</p>
-              </a>
-            </div>}
-            <div className="icons-div">
-              <a href={"https://www.google.com/maps/search/?api=1&query=" + school.endereco_completo + " " + GLOBALS.city_state} target="_blank">
-                <p className="text-center"><FontAwesomeIcon icon="map-marker-alt" size="lg" className="icons icons-lg" /><br />{STRINGS.actions.see_on_map}</p>
-              </a>
-            </div>
+            <SchoolContact school={school} />
           </div>
         </div>
       );
