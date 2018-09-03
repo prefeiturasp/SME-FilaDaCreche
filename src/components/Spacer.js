@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-export class Spacer extends React.Component {
-  render() {
-    return (
-      <div className={this.props.classSize}>
-      </div>
-    );
-  }
-}
+export const Spacer = (props) => (
+  <div className={props.classSize}>
+  </div>
+);
+
+Spacer.propTypes = {
+  classSize: PropTypes.string,
+};
