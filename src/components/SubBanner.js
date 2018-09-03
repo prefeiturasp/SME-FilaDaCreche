@@ -11,5 +11,5 @@ export const SubBanner = (props) => (
 
 SubBanner.propTypes = {
   title: PropTypes.string,
-  paragraphs: PropTypes.string
+  paragraphs: PropTypes.arrayOf(PropTypes.string)
 };
