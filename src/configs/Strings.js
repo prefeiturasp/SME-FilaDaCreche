@@ -31,16 +31,16 @@ export default {
   },
   results: {
     total_wait_message: function (waitListTotal, groupName, numberOfSchools, address) {
-      return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`
+      return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`;
     },
     title_wait_message: function (waitListTotal, numberOfSchools) {
       return `Há ${waitListTotal} crianças na fila de espera destas ${numberOfSchools} creches`;
     },
-    see_list_below: "Veja abaixo a lista das creches num raio de 2 quilômetros.",
-    data_updated_at: function (dateString) {
-      let formattedDate = new Date(dateString).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-      return `* Dados atualizados em ${formattedDate}`;
-    }
+    data_updated_at: function (updatedAt) {
+      const fomattedDate = new Date(updatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
+      return `Estes dados foram atualizados em ${fomattedDate}.`;
+    },
+    see_list_below: "Veja abaixo a lista das creches num raio de 2 quilômetros."
   },
   school_list_explanation: {
     paragraphs: [

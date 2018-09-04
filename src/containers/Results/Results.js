@@ -59,7 +59,6 @@ export class Results extends React.Component {
     const schoolsNearby = this.state.schoolsNearby ? this.state.schoolsNearby : false;
     const numberOfSchools = this.state.schoolsNearby ? this.state.schoolsNearby.length : false;
     const waitListTotal = this.state.waitListTotal ? this.state.waitListTotal : false;
-    const updatedAtMsg = this.state.waitListUpdatedAt ? STRINGS.results.data_updated_at(this.state.waitListUpdatedAt) : false;
     return (
       <div>
         <BackButton />
@@ -68,10 +67,9 @@ export class Results extends React.Component {
         />}
         {this.state.waitListLoaded && <Banner
           title={STRINGS.results.title_wait_message(waitListTotal, numberOfSchools)}
-          paragraphs={[STRINGS.results.total_wait_message(waitListTotal, this.state.groupName, numberOfSchools, this.state.geocodedAddress), STRINGS.results.see_list_below]}
+          paragraphs={[STRINGS.results.total_wait_message(waitListTotal, this.state.groupName, numberOfSchools, this.state.geocodedAddress), STRINGS.results.data_updated_at(this.state.waitListUpdatedAt), STRINGS.results.see_list_below]}
         />}
-        {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} groupCode={this.state.groupCode} updatedAtMsg={updatedAtMsg} />}
-        <Spacer classSize="spacer-sm" />
+        {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} groupCode={this.state.groupCode} />}
         {this.state.waitListLoaded && <Banner
           title={STRINGS.actions.can_do}
         />}
