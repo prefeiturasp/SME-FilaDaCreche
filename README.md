@@ -23,7 +23,7 @@ Para que os pais e famílias possam se programar e acompanhar a geração de vag
 http://filadacreche.sme.prefeitura.sp.gov.br
 
 ### Nossos outros repositórios
-1[SME Fila da creche API](ttps://github.com/prefeiturasp/SME-fila-da-creche-API)
+1[SME Fila da creche API](https://github.com/prefeiturasp/SME-fila-da-creche-API)
 
 ## Comunicação
 
