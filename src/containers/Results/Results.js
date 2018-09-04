@@ -67,8 +67,8 @@ export class Results extends React.Component {
           title={STRINGS.actions.loading_results}
         />}
         {this.state.waitListLoaded && <Banner
-          title={STRINGS.results.total_wait_message(waitListTotal, this.state.groupName, numberOfSchools, this.state.geocodedAddress)}
-          paragraphs={[STRINGS.results.see_list_below]}
+          title={STRINGS.results.title_wait_message(waitListTotal, numberOfSchools)}
+          paragraphs={[STRINGS.results.total_wait_message(waitListTotal, this.state.groupName, numberOfSchools, this.state.geocodedAddress), STRINGS.results.see_list_below]}
         />}
         {this.state.waitListLoaded && <SchoolList schools={schoolsNearby} groupName={this.state.groupName} groupCode={this.state.groupCode} updatedAtMsg={updatedAtMsg} />}
         <Spacer classSize="spacer-sm" />
