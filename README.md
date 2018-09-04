@@ -48,7 +48,7 @@ Qualquer outro grupo de discussão não é reconhecido oficialmente.
 ## Como contribuir
 
 Contribuições são **super bem vindas**! Se você tem vontade de construir o
-prato aberto conosco, veja o nosso [guia de contribuição](./CONTRIBUTING.md)
+Fila da creche conosco, veja o nosso [guia de contribuição](./CONTRIBUTING.md)
 onde explicamos detalhadamente como trabalhamos e de que formas você pode nos
 ajudar a alcançar nossos objetivos. Lembrando que todos devem seguir 
 nosso [código de conduta](./CODEOFCONDUCT.md).
