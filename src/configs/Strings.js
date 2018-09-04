@@ -99,8 +99,7 @@ export default {
     month_of_birth: "Mês de nascimento",
     year_of_birth: "Ano de nascimento",
     phone: "Telefone",
-    meters: "metros",
-    daycare: "Creche"
+    meters: "metros"
   },
   routes: {
     privacy: "/privacidade",

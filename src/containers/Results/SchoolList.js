@@ -47,11 +47,6 @@ export class SchoolList extends React.Component {
     return (
       <div>
         <div className="school-list">
-          <div className="row school-list-header">
-            <div className="col-xs-8">
-              <h5>{STRINGS.messages.daycare}</h5>
-            </div>
-          </div>
           {this.generateSchoolList(this.state.schoolListPaginated)}
           <div className="row margin-bottom-sm">
             {paginate && <Link to="#" >
