@@ -30,17 +30,14 @@ export default {
     paragraphs: ["Vou procurar creches que fiquem até 2 quilômetros de distância do seu endereço."]
   },
   results: {
-    total_wait_message: function (waitListTotal, groupName, numberOfSchools, address) {
-      return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`
+    total_wait_message: function (waitListTotal, groupName, numberOfSchools, address, updatedAt) {
+      const fomattedDate = new Date(updatedAt).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
+      return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}. Estes dados foram atualizados em ${fomattedDate}.`;
     },
     title_wait_message: function (waitListTotal, numberOfSchools) {
       return `${waitListTotal} crianças na fila de espera destas ${numberOfSchools} creches`;
     },
-    see_list_below: "Veja abaixo a lista das creches num raio de 2 quilômetros.",
-    data_updated_at: function (dateString) {
-      let formattedDate = new Date(dateString).toLocaleDateString('pt-BR', {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
-      return `* Dados atualizados em ${formattedDate}`;
-    }
+    see_list_below: "Veja abaixo a lista das creches num raio de 2 quilômetros."
   },
   school_list_explanation: {
     paragraphs: [

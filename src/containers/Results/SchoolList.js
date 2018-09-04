@@ -58,7 +58,6 @@ export class SchoolList extends React.Component {
               <DefaultButton title={STRINGS.actions.see_more} onClick={this.handleSeeMore} />
             </Link>}
           </div>
-          <p>{this.props.updatedAtMsg}</p>
         </div>
       </div>
     )
