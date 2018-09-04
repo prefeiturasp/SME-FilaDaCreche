@@ -34,7 +34,7 @@ export default {
       return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`
     },
     title_wait_message: function (waitListTotal, numberOfSchools) {
-      return `${waitListTotal} crianças na fila de espera destas ${numberOfSchools} creches`;
+      return `Há ${waitListTotal} crianças na fila de espera destas ${numberOfSchools} creches`;
     },
     see_list_below: "Veja abaixo a lista das creches num raio de 2 quilômetros.",
     data_updated_at: function (dateString) {
