@@ -48,12 +48,11 @@ export class SchoolList extends React.Component {
       <div>
         <div className="school-list">
           {this.generateSchoolList(this.state.schoolListPaginated)}
-          <div className="row margin-bottom-sm">
+          <div className="row">
             {paginate && <Link to="#" >
               <DefaultButton title={STRINGS.actions.see_more} onClick={this.handleSeeMore} />
             </Link>}
           </div>
-          <p>{this.props.updatedAtMsg}</p>
         </div>
       </div>
     )
