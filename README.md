@@ -84,6 +84,8 @@ Your app is ready to be deployed!
 
 Builds and deploys the app to GitHub Pages.
 
+---
+
 Baseado no Readme do [i-educar](https://github.com/portabilis/i-educar)
 
 
