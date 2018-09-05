@@ -95,7 +95,7 @@ feedback da comunidade a respeito do que está sendo proposto.
 Issues que estão em processo de discussão devem receber o label **discussão**
 indicando que aquela issue precisa dos inputs e feedbacks dos membros da
 comunidade. Nós te encorajamos a participar o máximo possível mas fique atento
-ao nosso [código de conduta](./CODE_OF_CONDUCT.md) antes de realizar qualquer
+ao nosso [código de conduta](https://github.com/prefeiturasp/SME-FilaDaCreche/blob/pamnovalli-patch-1/CODEOFCONDUCT.md) antes de realizar qualquer
 interação com os outros membros da comunidade.
 
 ### Fazendo pull requests
