@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, HashRouter } from 'react-router-dom';
+import { Route, HashRouter } from 'react-router-dom';
 // import { connect } from 'react-redux'
 import 'App.css';
 
@@ -15,8 +15,6 @@ import { AddressInput } from 'containers/AddressInput/AddressInput';
 import { Results } from 'containers/Results/Results';
 import { Register } from 'containers/Register/Register';
 
-import GLOBALS from 'configs/MainConfigs';
-import API from 'configs/Api';
 import STRINGS from 'configs/Strings';
 
 class App extends Component {

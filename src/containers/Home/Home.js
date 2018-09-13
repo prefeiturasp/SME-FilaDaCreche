@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import STRINGS from 'configs/Strings';
 import { ContinueButton } from "components/ContinueButton";
 import { HomeBanner } from "components/HomeBanner";
-import { Logo } from "components/Logo";
 import { Footer } from "components/Footer";
 
 export class Home extends React.Component {

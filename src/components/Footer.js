@@ -3,8 +3,6 @@ import GLOBALS from 'configs/MainConfigs';
 import logoUnesco from 'assets/images/logo-unesco.png';
 import logoSme from 'assets/images/logo-sme.png';
 import logoPatio from 'assets/images/logo-patio.png';
-import footerMob from 'assets/images/footer-mob.png';
-import footerDesk from 'assets/images/footer-desk.png';
 
 const logos = [
   {img: logoPatio, url: GLOBALS.url_patio},

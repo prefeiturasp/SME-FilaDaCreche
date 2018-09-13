@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import STRINGS from 'configs/Strings';
 import GLOBALS from 'configs/MainConfigs';
 import API from 'configs/Api';
 import { BackButton } from "components/BackButton";
 import { Banner } from "components/Banner";
-import { Spacer } from "components/Spacer";
 import { DefaultButton } from "components/DefaultButton";
 import { ContinueButton } from "components/ContinueButton";
 import { SchoolList } from "./SchoolList";
