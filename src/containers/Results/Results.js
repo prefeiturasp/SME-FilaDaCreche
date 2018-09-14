@@ -58,7 +58,7 @@ export class Results extends React.Component {
   render() {
     const schoolsNearby = this.state.schoolsNearby ? this.state.schoolsNearby : false;
     const numberOfSchools = this.state.schoolsNearby ? this.state.schoolsNearby.length : false;
-    const waitListTotal = this.state.waitListTotal ? this.state.waitListTotal : false;
+    const waitListTotal = this.state.waitListTotal ? this.state.waitListTotal : 0;
     return (
       <div>
         <BackButton />
