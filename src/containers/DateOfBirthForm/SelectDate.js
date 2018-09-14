@@ -1,9 +1,8 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { DefaultButton } from "components/DefaultButton";
 import { SubBanner } from "components/SubBanner";
 import STRINGS from 'configs/Strings';
-import GLOBALS from 'configs/MainConfigs';
 import calculatePreschoolGroup from 'utils/calculatePreschoolGroup';
 import generateMonthsOptions from 'utils/generateMonthsOptions';
 import generateYearsOptions from 'utils/generateYearsOptions';
@@ -65,7 +64,6 @@ export class SelectDate extends React.Component {
   }
 
   render() {
-    const dateSelected = (this.state.monthOfBirth && this.state.yearOfBirth) ? true : false;
     const preeschoolCalcError = this.state.preeschoolCalcError;
     return (
       <div>

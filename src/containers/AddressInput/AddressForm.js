@@ -1,7 +1,7 @@
 /*global google*/
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import { DefaultButton } from 'components/DefaultButton';
 import GLOBALS from 'configs/MainConfigs';

@@ -1,6 +1,5 @@
 import React from 'react';
 import STRINGS from 'configs/Strings';
-import logo from 'assets/images/logo.svg';
 import logoImg from 'assets/images/logo.png';
 
 export const Logo = () => (

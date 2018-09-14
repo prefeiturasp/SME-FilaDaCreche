@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BackButton } from 'components/BackButton';
 import { Banner } from 'components/Banner';
 import { DefaultButton } from 'components/DefaultButton';

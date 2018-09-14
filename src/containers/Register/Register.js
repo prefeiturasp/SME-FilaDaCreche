@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import STRINGS from 'configs/Strings';
 import { BackButton } from "components/BackButton";
 import { Banner } from "components/Banner";
