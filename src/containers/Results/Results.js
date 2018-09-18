@@ -8,6 +8,7 @@ import { Banner } from "components/Banner";
 import { DefaultButton } from "components/DefaultButton";
 import { ContinueButton } from "components/ContinueButton";
 import { SchoolList } from "./SchoolList";
+import { Spacer } from "components/Spacer";
 
 export class Results extends React.Component {
   constructor(props) {
@@ -76,7 +77,7 @@ export class Results extends React.Component {
           schools={schoolsNearby}
           groupName={this.state.groupName}
           groupCode={this.state.groupCode}
-        /> : null}
+        /> : <Spacer classSize="spacer-sm"/>}
         {this.state.waitListLoaded && <Banner
           title={STRINGS.actions.can_do}
         />}
