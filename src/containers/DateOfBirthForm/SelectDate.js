@@ -45,8 +45,8 @@ export class SelectDate extends React.Component {
   }
 
   setAge() {
-    const monthOfBirth = parseInt(this.state.monthOfBirth);
-    const yearOfBirth = parseInt(this.state.yearOfBirth);
+    const monthOfBirth = parseInt(this.state.monthOfBirth, 10);
+    const yearOfBirth = parseInt(this.state.yearOfBirth, 10);
     const preschoolGroup = calculatePreschoolGroup(monthOfBirth, yearOfBirth);
     const ageMsg = composeDateOfBirthMsg(monthOfBirth, yearOfBirth);
     const state = {
