@@ -12,7 +12,10 @@ import { SchoolList } from "./SchoolList";
 export class Results extends React.Component {
   constructor(props) {
     super(props);
-    const groupName = GLOBALS.age_ranges.find(o => o.serie == this.props.match.params.groupCode).dc_serie_ensino;
+    const groupName = GLOBALS.age_ranges.find(
+      // eslint-disable-next-line eqeqeq
+      o => o.serie == this.props.match.params.groupCode
+    ).dc_serie_ensino;
     this.state = {
       groupCode: this.props.match.params.groupCode,
       groupName: groupName,

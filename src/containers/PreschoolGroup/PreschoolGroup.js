@@ -10,8 +10,8 @@ import composeDateOfBirthMsg from 'utils/composeDateOfBirthMsg';
 export class PreschoolGroup extends React.Component {
   constructor(props) {
     super(props);
-    const monthOfBirth = parseInt(this.props.match.params.monthOfBirth);
-    const yearOfBirth = parseInt(this.props.match.params.yearOfBirth);
+    const monthOfBirth = parseInt(this.props.match.params.monthOfBirth, 10);
+    const yearOfBirth = parseInt(this.props.match.params.yearOfBirth, 10);
     const preschoolGroup = calculatePreschoolGroup(monthOfBirth, yearOfBirth);
     this.state = {
       preschoolGroup: preschoolGroup,
