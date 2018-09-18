@@ -31,9 +31,11 @@ export default {
   },
   results: {
     total_wait_message: function (waitListTotal, groupName, numberOfSchools, address) {
+      if (!numberOfSchools) return `Não há creches perto de ${address}.`;
       return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`;
     },
     title_wait_message: function (waitListTotal, numberOfSchools) {
+      if (!numberOfSchools) return `Não há creches próximas a este endereço.`;
       return `Há ${waitListTotal} crianças na fila de espera destas ${numberOfSchools} creches`;
     },
     data_updated_at: function (updatedAt) {
