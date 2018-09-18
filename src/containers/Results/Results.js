@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import STRINGS from 'configs/Strings';
-import GLOBALS from 'configs/MainConfigs';
+import findGroupName from 'utils/findGroupName';
 import API from 'configs/Api';
 import { BackButton } from "components/BackButton";
 import { Banner } from "components/Banner";
@@ -13,13 +13,9 @@ import { Spacer } from "components/Spacer";
 export class Results extends React.Component {
   constructor(props) {
     super(props);
-    const groupName = GLOBALS.age_ranges.find(
-      // eslint-disable-next-line eqeqeq
-      o => o.serie == this.props.match.params.groupCode
-    ).dc_serie_ensino;
     this.state = {
       groupCode: this.props.match.params.groupCode,
-      groupName: groupName,
+      groupName: findGroupName(this.props.match.params.groupCode),
       geocodedAddressLng: this.props.match.params.geocodedAddressLng,
       geocodedAddressLat: this.props.match.params.geocodedAddressLat,
       geocodedAddress: this.props.match.params.geocodedAddress,
