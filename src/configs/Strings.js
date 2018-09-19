@@ -98,7 +98,8 @@ export default {
     start_now: "Comece agora",
     see_on_map: "Ver no mapa",
     call: "Ligar",
-    back: "Voltar"
+    back: "Voltar",
+    loading_error: "Não conseguimos buscar as informações para este endereço, por favor, tente novamente mais tarde",
   },
   messages: {
     month_of_birth: "Mês de nascimento",
