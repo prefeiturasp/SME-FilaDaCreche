@@ -3,13 +3,21 @@ import PropTypes from 'prop-types';
 import STRINGS from 'configs/Strings';
 import { Banner } from 'components/Banner';
 import findGroupName from 'utils/findGroupName';
-import { SchoolList } from 'containers/Results/SchoolList';
+import { SchoolList } from 'components/SchoolList';
 import { Link } from 'react-router-dom';
 import { DefaultButton } from 'components/DefaultButton';
 import { ContinueButton } from 'components/ContinueButton';
 import { Spacer } from 'components/Spacer';
 
 export const ResultsLoaded = (props) => {
+  const schools = props.schoolsNearby.map(school => {
+      return {
+        nm_unidade_educacao: school.nm_unidade_educacao,
+        endereco_completo: school.endereco_completo,
+        distance: school.distance,
+        signed_up: school[`vagas_cd_serie_${props.groupCode}`],
+      };
+  });
   return (
     <React.Fragment>
       <Banner
@@ -29,9 +37,9 @@ export const ResultsLoaded = (props) => {
         ]}
       />
       {props.schoolsNearby.length ? <SchoolList
-        schools={props.schoolsNearby}
-        groupName={findGroupName(props.groupCode)}
         groupCode={props.groupCode}
+        schools={schools}
+        shortenList={true}
       /> : <Spacer
         classSize="spacer-sm"
       /> }
