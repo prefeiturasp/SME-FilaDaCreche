@@ -56,33 +56,34 @@ nosso [código de conduta](./CODEOFCONDUCT.md).
 
 # Instalação 
 
-1. Create `.env` file following `.env.sample` as an example.
-2. `npm install`
-3. `npm start`
+1. Crie um arquivo de texto chamado `.env` seguindo o exemplo`.env.sample`.
+2. Digite os comandos:
+ `npm install`
+ `npm start`
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Executa o aplicativo em modo de desenvolvimento.<br>
+Abra [http://localhost:3000](http://localhost:3000) para visualiza-lo no navegador.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+A pagina será recarregada se você fizer edições.<br>
+E você tambem poderá acompanhar os erros no console.
 
 ### `npm test`
 
-Runs tests from `.test.js` files.
+Executa os testes presentes no arquivo`.test.js`.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cria o arquivo para produção na pasta `build`.<br>
+Ele agrupa corretamente o React em modo de produção e otimiza o build para obter o melhor desempenho.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+A compilação é reduzida e os nomes de arquivos posssuem hashes.<br>
+Seu aplicativo está pronto para ser implantado!
 
 ### `npm run deploy`
 
-Builds and deploys the app to GitHub Pages.
+Cria e implanta o aplicativo no GitHub Pages.
 
 ---
 
