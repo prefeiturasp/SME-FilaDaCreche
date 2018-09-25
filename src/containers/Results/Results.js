@@ -31,7 +31,6 @@ export class Results extends React.Component {
             waitListSize: result.results.wait,
           }
         });
-        console.log(this.state.queryResults);
       },
       (error) => {
         this.setState({
