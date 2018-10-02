@@ -1,17 +1,23 @@
 /*global google*/
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import { DefaultButton } from 'components/DefaultButton';
-import GLOBALS from 'configs/MainConfigs';
-import STRINGS from 'configs/Strings';
+import React from "react";
+import { Link } from "react-router-dom";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng
+} from "react-places-autocomplete";
+import { DefaultButton } from "components/DefaultButton";
+import GLOBALS from "configs/MainConfigs";
+import STRINGS from "configs/Strings";
 
 const placesAutocompleteOptions = {
-  location: new google.maps.LatLng(GLOBALS.city_center.lat, GLOBALS.city_center.lon),
+  location: new google.maps.LatLng(
+    GLOBALS.city_center.lat,
+    GLOBALS.city_center.lon
+  ),
   radius: 20000,
-  types: ['address'],
-  componentRestrictions: {country: "br"},
+  types: ["address"],
+  componentRestrictions: { country: "br" },
   // FIXME: bounds and strictBounds still not working
   bounds: new google.maps.LatLngBounds(
     new google.maps.LatLng(GLOBALS.city_bbox_s, GLOBALS.city_bbox_w),
@@ -20,41 +26,52 @@ const placesAutocompleteOptions = {
   strictBounds: true
 };
 
+const cssClasses = {
+  input: "autocomplete-input"
+};
+
 export class AddressForm extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { inputAddress: '', geocodedAddress: '', geocodedAddressLat: '', geocodedAddressLng: '' }
-    this.onChange = (inputAddress) => this.setState({ inputAddress })
+    super(props);
+    this.state = {
+      inputAddress: "",
+      geocodedAddress: "",
+      geocodedAddressLat: "",
+      geocodedAddressLng: ""
+    };
+    this.onChange = inputAddress => this.setState({ inputAddress });
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
-  handleFormSubmit = (event) => {
-    event.preventDefault()
+  handleFormSubmit = event => {
+    event.preventDefault();
 
     geocodeByAddress(this.state.inputAddress)
       .then(results => {
-        this.setState({ geocodedAddress: results[0].formatted_address })
+        this.setState({ geocodedAddress: results[0].formatted_address });
         getLatLng(results[0])
           .then(({ lat, lng }) => {
-            this.setState({ geocodedAddressLat: lat, geocodedAddressLng: lng })
-            this.props.onAddressChange(this.state.inputAddress, this.state.geocodedAddress, this.state.geocodedAddressLat, this.state.geocodedAddressLng)
+            this.setState({ geocodedAddressLat: lat, geocodedAddressLng: lng });
+            this.props.onAddressChange(
+              this.state.inputAddress,
+              this.state.geocodedAddress,
+              this.state.geocodedAddressLat,
+              this.state.geocodedAddressLng
+            );
           })
-          .catch(error => console.error('Error', error))
+          .catch(error => console.error("Error", error));
       })
-      .catch(error => console.error('Error', error))
-  }
+      .catch(error => console.error("Error", error));
+  };
 
   render() {
-    const cssClasses = {
-      input: 'autocomplete-input'
-    }
     const inputProps = {
       value: this.state.inputAddress,
       onChange: this.onChange,
-      type: 'search',
+      type: "search",
       placeholder: STRINGS.actions.input_address,
-      autoFocus: true,
-    }
+      autoFocus: true
+    };
 
     return (
       <div>
@@ -64,10 +81,13 @@ export class AddressForm extends React.Component {
           classNames={cssClasses}
           autoFocus={false}
         />
-        <Link to="#" >
-          <DefaultButton title={STRINGS.actions.search} onClick={this.handleFormSubmit} />
+        <Link to="#">
+          <DefaultButton
+            title={STRINGS.actions.search}
+            onClick={this.handleFormSubmit}
+          />
         </Link>
       </div>
-    )
+    );
   }
 }
