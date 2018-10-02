@@ -4,7 +4,7 @@ import { BackButton } from "components/BackButton";
 import { Banner } from "components/Banner";
 import { SubBanner } from "components/SubBanner";
 import { ContinueButton } from "components/ContinueButton";
-import { RegistrationList } from "./RegistrationList";
+import { SchoolList } from "components/SchoolList";
 
 export class Register extends React.Component {
   constructor(props) {
@@ -19,6 +19,15 @@ export class Register extends React.Component {
   }
 
   render() {
+    const schools = this.props.location.state.schoolsNearby.map(school => {
+      return {
+        nm_unidade_educacao: school.nm_unidade_educacao,
+        sg_tp_escola: school.sg_tp_escola,
+        endereco_completo: school.endereco_completo,
+        distance: school.distance,
+        telefones: school.telefones,
+      };
+    });
     return (
       <div>
         <BackButton />
@@ -36,7 +45,7 @@ export class Register extends React.Component {
         <Banner
           title={STRINGS.registration_list.title}
         />
-        <RegistrationList schools={this.props.location.state.schoolsNearby} />
+        <SchoolList schools={schools} shortenList={false} />
         <Banner
           title={STRINGS.actions.can_do}
         />
