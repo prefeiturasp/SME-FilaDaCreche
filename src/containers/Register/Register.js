@@ -21,11 +21,11 @@ export class Register extends React.Component {
   render() {
     const schools = this.setSchools();
     return (
-      this.renderTemplate(schools)
+      this.generateRenderTemplate(schools)
     );
   }
 
-  renderTemplate(schools) {
+  generateRenderTemplate(schools) {
     return <div>
         <BackButton/>
         <Banner
