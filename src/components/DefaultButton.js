@@ -14,7 +14,7 @@ export const DefaultButton = (props) => (
     </div>
     <div className="col-xs-2 no-pad">
       <span className="pull-right">
-        <FontAwesomeIcon icon="chevron-right" size="lg" className="icons icons-lg" />
+        <FontAwesomeIcon icon="chevron-right" size="2x" className="icons" />
       </span>
     </div>
   </div>
