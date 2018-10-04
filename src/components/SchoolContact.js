@@ -14,7 +14,7 @@ export const SchoolContact = ({school}) => (
   <React.Fragment>
     {school.telefones && <div className="icon-div">
       <a href={"tel:" + school.telefones[0]}>
-        <p className="text-center"><FontAwesomeIcon icon="phone" size="2x" /><br />{STRINGS.actions.call}</p>
+        <p className="text-center"><FontAwesomeIcon icon="phone" size="2x" className="icons" /><br />{STRINGS.actions.call}</p>
       </a>
     </div>}
     <div className="icons-div">
