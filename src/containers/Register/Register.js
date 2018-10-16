@@ -21,36 +21,32 @@ export class Register extends React.Component {
   render() {
     const schools = this.setSchools();
     return (
-      this.generateRenderTemplate(schools)
+      <div>
+        <BackButton />
+        <Banner
+          title={STRINGS.registration_greeting.title}
+        />
+        <SubBanner
+          title={STRINGS.registration_documents.title}
+          paragraphs={STRINGS.registration_documents.paragraphs}
+        />
+        <SubBanner
+          title={STRINGS.registration_steps.title}
+          paragraphs={STRINGS.registration_steps.paragraphs}
+        />
+        <Banner
+          title={STRINGS.registration_list.title}
+        />
+        <SchoolList schools={schools} shortenList={false} />
+        <Banner
+          title={STRINGS.actions.can_do}
+        />
+        <ContinueButton title={STRINGS.actions.compare_address} subtitle={STRINGS.actions.see_wait_near} link={STRINGS.routes.address + "/" + this.state.groupCode} />
+        <ContinueButton title={STRINGS.actions.back_to_start} subtitle="" link="/" />
+      </div>
     );
   }
 
-  generateRenderTemplate(schools) {
-    return <div>
-        <BackButton/>
-        <Banner
-            title={STRINGS.registration_greeting.title}
-        />
-        <SubBanner
-            title={STRINGS.registration_documents.title}
-            paragraphs={STRINGS.registration_documents.paragraphs}
-        />
-        <SubBanner
-            title={STRINGS.registration_steps.title}
-            paragraphs={STRINGS.registration_steps.paragraphs}
-        />
-        <Banner
-            title={STRINGS.registration_list.title}
-        />
-        <SchoolList schools={schools} shortenList={false}/>
-        <Banner
-            title={STRINGS.actions.can_do}
-        />
-        <ContinueButton title={STRINGS.actions.compare_address} subtitle={STRINGS.actions.see_wait_near}
-                        link={STRINGS.routes.address + "/" + this.state.groupCode}/>
-        <ContinueButton title={STRINGS.actions.back_to_start} subtitle="" link="/"/>
-    </div>;
-  }
 
   setSchools() {
     this.props.location.state.schoolsNearby.map(school => {
