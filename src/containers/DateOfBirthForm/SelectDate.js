@@ -20,25 +20,14 @@ export class SelectDate extends React.Component {
       preeschoolCalcError: null,
       ageMsg: null
     };
-    this.setMonth = this.setMonth.bind(this)
-    this.setYear = this.setYear.bind(this)
+    this.setDateAttribute = this.setDateAttribute.bind(this);
   }
 
-  setMonth = (e) => {
+  setDateAttribute = (attribute, value) => {
     this.setState({
-      monthOfBirth: e.target.value
+      [attribute]: value
     }, () => {
-      if (this.state.yearOfBirth !== undefined) {
-        this.setAge();
-      }
-    });
-  }
-
-  setYear = (e) => {
-    this.setState({
-      yearOfBirth: e.target.value
-    }, () => {
-      if (this.state.monthOfBirth !== undefined) {
+      if (this.state.yearOfBirth !== undefined && this.state.monthOfBirth !== undefined) {
         this.setAge();
       }
     });
@@ -67,11 +56,20 @@ export class SelectDate extends React.Component {
     const preeschoolCalcError = this.state.preeschoolCalcError;
     return (
       <div>
-        <select className="default-select" id="month-of-birth" value={this.state.monthOfBirth} onChange={this.setMonth}>
+        <select
+          className="default-select"
+          id="month-of-birth"
+          value={this.state.monthOfBirth}
+          onChange={(event) => this.setDateAttribute('monthOfBirth', event.target.value)}
+        >
           <option value="">{STRINGS.messages.month_of_birth}</option>
           {generateMonthsOptions()}
         </select>
-        <select className="default-select" id="year-of-birth" onChange={this.setYear}>
+        <select
+          className="default-select"
+          id="year-of-birth"
+          onChange={(event) => this.setDateAttribute('yearOfBirth', event.target.value)}
+        >
           <option value="">{STRINGS.messages.year_of_birth}</option>
           {generateYearsOptions()}
         </select>
