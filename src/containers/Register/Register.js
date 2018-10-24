@@ -19,7 +19,15 @@ export class Register extends React.Component {
   }
 
   render() {
-    const schools = this.setSchools();
+    const schools = this.props.location.state.schoolsNearby.map(school => {
+      return {
+        nm_unidade_educacao: school.nm_unidade_educacao,
+        sg_tp_escola: school.sg_tp_escola,
+        endereco_completo: school.endereco_completo,
+        distance: school.distance,
+        telefones: school.telefones,
+      };
+    });
     return (
       <div>
         <BackButton />
@@ -45,18 +53,5 @@ export class Register extends React.Component {
         <ContinueButton title={STRINGS.actions.back_to_start} subtitle="" link="/" />
       </div>
     );
-  }
-
-
-  setSchools() {
-    this.props.location.state.schoolsNearby.map(school => {
-      return {
-        nm_unidade_educacao: school.nm_unidade_educacao,
-        sg_tp_escola: school.sg_tp_escola,
-        endereco_completo: school.endereco_completo,
-        distance: school.distance,
-        telefones: school.telefones,
-      };
-    });
   }
 }
