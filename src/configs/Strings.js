@@ -120,5 +120,9 @@ export default {
   },
   site: {
     tag_line: "Fila da Creche - O melhor caminho para sua vaga"
+  },
+  not_found: {
+    title: "Desculpe, não encontramos esta página...",
+    subtitle: "A página que você está tentando acessar não pode ser encontrada.",
   }
 }
