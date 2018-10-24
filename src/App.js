@@ -32,7 +32,7 @@ class App extends Component {
             <Route path={STRINGS.routes.address + "/:groupCode"} component={AddressInput} />
             <Route path={STRINGS.routes.results + "/:groupCode/:geocodedAddressLng/:geocodedAddressLat/:geocodedAddress"} component={Results} />
             <Route path={STRINGS.routes.register + "/:groupCode?"} component={Register} />
-            <Route path='' component={NotFound} />
+            <Route path='*' component={NotFound} />
           </Switch>
 
           <GoogleAnalytics />
