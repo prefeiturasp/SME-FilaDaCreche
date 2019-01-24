@@ -57,13 +57,13 @@ ajudar a alcançar nossos objetivos. Lembrando que todos devem seguir
 nosso [código de conduta](./CODEOFCONDUCT.md).
 
 
-# Organização do projeto
+## Organização do projeto
 
   * Dependências estão citadas no arquivo Package.json
   * Gerenciamento de estados de componentes globais é feito através do Redux
  
  
-# Instalação 
+## Instalação 
 
 1. Crie um arquivo de texto chamado `.env` seguindo o exemplo`.env.sample`.
 2. `npm install` cria a pasta node_modules e baixa as dependências do arquivo Package.json
