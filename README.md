@@ -19,6 +19,8 @@ Nós somos o **Pátio Digital**, uma iniciativa da Secretaria Municipal de Educa
 3. [Roadmap de tecnologia](#roadmap-de-tecnologia)
 4. [Como contribuir](#como-contribuir)
 5. [Instalação](#instalação)
+6. [Build e Deploy](#build-e-deploy)
+7. [Testes](#testes)
 
 ## Sobre o Fila da Creche
 
@@ -60,6 +62,8 @@ nosso [código de conduta](./CODEOFCONDUCT.md).
 ## Organização do projeto
 
   * Dependências estão citadas no arquivo Package.json
+  * Arquivo .env gerência as variáveis de ambiente  
+  * Nâo de push no arquivo .env para o git se necessário crie um arquivo .gitignore
   * Gerenciamento de estados de componentes globais é feito através do Redux
  
  
@@ -67,31 +71,23 @@ nosso [código de conduta](./CODEOFCONDUCT.md).
 
 1. Crie um arquivo de texto chamado `.env` seguindo o exemplo`.env.sample`.
 2. `npm install` cria a pasta node_modules e baixa as dependências do arquivo Package.json
-3. `npm start` para executar o projeto
+3. `npm start` executa o projeto em [http://localhost:3000]
 
-### `npm start`
 
-Executa o aplicativo em modo de desenvolvimento.<br>
-Abra [http://localhost:3000](http://localhost:3000) para visualiza-lo no navegador.
+## Build e Deploy
 
-A pagina será recarregada se você fizer edições.<br>
-E você tambem poderá acompanhar os erros no console.
-
-### `npm test`
-
-Executa os testes presentes no arquivo`.test.js`.
-
-### `npm run build`
-
-Cria o arquivo para produção na pasta `build`.<br>
+1. `npm run build` cria o arquivo para produção na pasta `build`.<br>
 Ele agrupa corretamente o React em modo de produção e otimiza o build para obter o melhor desempenho.
-
 A compilação é reduzida e os nomes de arquivos posssuem hashes.<br>
 Seu aplicativo está pronto para ser implantado!
 
-### `npm run deploy`
+2. `npm run deploy` cria e implanta o aplicativo no GitHub Pages.
 
-Cria e implanta o aplicativo no GitHub Pages.
+
+## Testes
+
+1. `npm test` executa os testes presentes no arquivo`.test.js`.
+
 
 ---
 
