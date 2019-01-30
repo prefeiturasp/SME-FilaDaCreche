@@ -18,9 +18,10 @@ Nós somos o **Pátio Digital**, uma iniciativa da Secretaria Municipal de Educa
 2. [Comunicação](#comunicação)
 3. [Roadmap de tecnologia](#roadmap-de-tecnologia)
 4. [Como contribuir](#como-contribuir)
-5. [Instalação](#instalação)
-6. [Build e Deploy](#build-e-deploy)
-7. [Testes](#testes)
+5. [Organização do projeto](#organização-do-projeto)
+6. [Instalação](#instalação)
+7. [Build e Deploy](#build-e-deploy)
+8. [Testes](#testes)
 
 ## Sobre o Fila da Creche
 
@@ -77,7 +78,7 @@ nosso [código de conduta](./CODEOFCONDUCT.md).
 ## Build e Deploy
 
 1. `npm run build` cria o arquivo para produção na pasta `build`.<br>
-Ele agrupa corretamente o React em modo de produção e otimiza o build para obter o melhor desempenho.
+Ele agrupa corretamente o React em modo de produção e otimiza o build para obter o melhor desempenho.<br>
 A compilação é reduzida e os nomes de arquivos posssuem hashes.<br>
 Seu aplicativo está pronto para ser implantado!
 
