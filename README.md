@@ -16,23 +16,21 @@ Nós somos o **Pátio Digital**, uma iniciativa da Secretaria Municipal de Educa
 
 1. [Sobre o Fila da creche](#sobre-o-fila-da-creche)
 2. [Comunicação](#comunicação)
-3. [Roadmap de tecnologia](#roadmap-de-tecnologia)
-4. [Como contribuir](#como-contribuir)
-5. [Organização do projeto](#organização-do-projeto)
-6. [Instalação](#instalação)
-7. [Build e Deploy](#build-e-deploy)
-8. [Testes](#testes)
+3. [Como contribuir](#como-contribuir)
+4. [Organização do projeto](#organização-do-projeto)
+5. [Instalação](#instalação)
+6. [Build e Deploy](#build-e-deploy)
+7. [Testes](#testes)
+8. [Repositório relacionado](#repositório-relacionado)
+
 
 ## Sobre o Fila da Creche
 
 Para que os pais e famílias possam se programar e acompanhar a geração de vagas na educação infantil, a Secretaria Municipal de Educação de São Paulo, por meio da iniciativa de governo aberto [Pátio Digital](http://patiodigital.prefeitura.sp.gov.br/), lançou uma ferramenta online inédita que permite saber como está a espera de acordo com o endereço fornecido e a faixa etária informada. 
 http://filadacreche.sme.prefeitura.sp.gov.br
 
-### Nossos outros repositórios
-1[SME Fila da creche API](https://github.com/prefeiturasp/SME-fila-da-creche-API)
 
 ## Comunicação
-
 
 | Canal de comunicação | Objetivos |
 |----------------------|-----------|
@@ -41,15 +39,6 @@ http://filadacreche.sme.prefeitura.sp.gov.br
 
 Qualquer outro grupo de discussão não é reconhecido oficialmente.
 
-## Roadmap de tecnologia
-
-
-### Passos iniciais
-- Melhorar a qualidade de código
-- Iniciar a escrita de testes unitários
-- Transferir front para o github pages
-- Iniciar escrita de testes funcionais
-- Melhorar documentação de maneira enxuta
 
 ## Como contribuir
 
@@ -58,6 +47,14 @@ Fila da creche conosco, veja o nosso [guia de contribuição](./CONTRIBUTING.md)
 onde explicamos detalhadamente como trabalhamos e de que formas você pode nos
 ajudar a alcançar nossos objetivos. Lembrando que todos devem seguir 
 nosso [código de conduta](./CODEOFCONDUCT.md).
+
+### Passos iniciais para contribuir
+
+- Melhorar a qualidade de código
+- Iniciar a escrita de testes unitários
+- Transferir front para o github pages
+- Iniciar escrita de testes funcionais
+- Melhorar documentação de maneira enxuta
 
 
 ## Organização do projeto
@@ -90,6 +87,10 @@ Seu aplicativo está pronto para ser implantado!
 1. `npm test` executa os testes presentes no arquivo`.test.js`.
 
 
+## Repositório relacionado
+
+[SME Fila da creche API](https://github.com/prefeiturasp/SME-fila-da-creche-API)
+ 
 ---
 
 Baseado no Readme do [i-educar](https://github.com/portabilis/i-educar)
