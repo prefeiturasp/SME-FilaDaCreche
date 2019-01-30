@@ -72,7 +72,7 @@ nosso [código de conduta](./CODEOFCONDUCT.md).
 
 1. Crie um arquivo de texto chamado `.env` seguindo o exemplo`.env.sample`.
 2. `npm install` cria a pasta node_modules e baixa as dependências do arquivo Package.json
-3. `npm start` executa o projeto em [http://localhost:3000]
+3. `npm start` executa o projeto em [http://localhost:3000](http://localhost:3000)
 
 
 ## Build e Deploy
