@@ -14,10 +14,12 @@ Nós somos o **Pátio Digital**, uma iniciativa da Secretaria Municipal de Educa
 
 ## Conteúdo
 
-1. [Sobre o Fila da creche](#sobre-o-fila-da-creche)  |     2. [Comunicação](#comunicação)     
-2. [Comunicação](#comunicação)                        |     3. [Como contribuir](#como-contribuir)                 
-4. [Organização do projeto](#organização-do-projeto)  |     5. [Instalação](#instalação)
-6. [Build e Deploy](#build-e-deploy)                  |     7. [Testes](#testes)
+1. [Sobre o Fila da creche](#sobre-o-fila-da-creche)    
+2. [Comunicação](#comunicação)       
+3. [Como contribuir](#como-contribuir)                 
+4. [Organização do projeto](#organização-do-projeto)  
+5. [Instalação](#instalação)
+6. [Build e Deploy](#build-e-deploy)                  
 7. [Testes](#testes)
 8. [Repositório relacionado](#repositório-relacionado)
 
