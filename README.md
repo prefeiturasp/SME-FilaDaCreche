@@ -14,22 +14,23 @@ Nós somos o **Pátio Digital**, uma iniciativa da Secretaria Municipal de Educa
 
 ## Conteúdo
 
-1. [Sobre o Fila da creche](#sobre-o-fila-da-creche)
-2. [Comunicação](#comunicação)
-3. [Roadmap de tecnologia](#roadmap-de-tecnologia)
-4. [Como contribuir](#como-contribuir)
+1. [Sobre o Fila da creche](#sobre-o-fila-da-creche)    
+2. [Comunicação](#comunicação)       
+3. [Como contribuir](#como-contribuir)                 
+4. [Organização do projeto](#organização-do-projeto)  
 5. [Instalação](#instalação)
+6. [Build e Deploy](#build-e-deploy)                  
+7. [Testes](#testes)
+8. [Repositório relacionado](#repositório-relacionado)
+
 
 ## Sobre o Fila da Creche
 
 Para que os pais e famílias possam se programar e acompanhar a geração de vagas na educação infantil, a Secretaria Municipal de Educação de São Paulo, por meio da iniciativa de governo aberto [Pátio Digital](http://patiodigital.prefeitura.sp.gov.br/), lançou uma ferramenta online inédita que permite saber como está a espera de acordo com o endereço fornecido e a faixa etária informada. 
 http://filadacreche.sme.prefeitura.sp.gov.br
 
-### Nossos outros repositórios
-1[SME Fila da creche API](https://github.com/prefeiturasp/SME-fila-da-creche-API)
 
 ## Comunicação
-
 
 | Canal de comunicação | Objetivos |
 |----------------------|-----------|
@@ -38,15 +39,6 @@ http://filadacreche.sme.prefeitura.sp.gov.br
 
 Qualquer outro grupo de discussão não é reconhecido oficialmente.
 
-## Roadmap de tecnologia
-
-
-### Passos iniciais
-- Melhorar a qualidade de código
-- Iniciar a escrita de testes unitários
-- Transferir front para o github pages
-- Iniciar escrita de testes funcionais
-- Melhorar documentação de maneira enxuta
 
 ## Como contribuir
 
@@ -56,38 +48,49 @@ onde explicamos detalhadamente como trabalhamos e de que formas você pode nos
 ajudar a alcançar nossos objetivos. Lembrando que todos devem seguir 
 nosso [código de conduta](./CODEOFCONDUCT.md).
 
+### Passos iniciais para contribuir
 
-# Instalação 
+- Melhorar a qualidade de código
+- Iniciar a escrita de testes unitários
+- Transferir front para o github pages
+- Iniciar escrita de testes funcionais
+- Melhorar documentação de maneira enxuta
+
+
+## Organização do projeto
+
+  * Dependências estão citadas no arquivo Package.json
+  * Arquivo .env gerência as variáveis de ambiente  
+  * Nâo de push no arquivo .env para o git se necessário crie um arquivo .gitignore
+  * Gerenciamento de estados de componentes globais é feito através do Redux
+ 
+ 
+## Instalação 
 
 1. Crie um arquivo de texto chamado `.env` seguindo o exemplo`.env.sample`.
-2. Digite os comandos:
- `npm install`
- `npm start`
+2. `npm install` cria a pasta node_modules e baixa as dependências do arquivo Package.json
+3. `npm start` executa o projeto em [http://localhost:3000](http://localhost:3000)
 
-### `npm start`
 
-Executa o aplicativo em modo de desenvolvimento.<br>
-Abra [http://localhost:3000](http://localhost:3000) para visualiza-lo no navegador.
+## Build e Deploy
 
-A pagina será recarregada se você fizer edições.<br>
-E você tambem poderá acompanhar os erros no console.
-
-### `npm test`
-
-Executa os testes presentes no arquivo`.test.js`.
-
-### `npm run build`
-
-Cria o arquivo para produção na pasta `build`.<br>
-Ele agrupa corretamente o React em modo de produção e otimiza o build para obter o melhor desempenho.
-
+1. `npm run build` cria o arquivo para produção na pasta `build`.<br>
+Ele agrupa corretamente o React em modo de produção e otimiza o build para obter o melhor desempenho.<br>
 A compilação é reduzida e os nomes de arquivos posssuem hashes.<br>
 Seu aplicativo está pronto para ser implantado!
 
-### `npm run deploy`
+2. `npm run deploy` cria e implanta o aplicativo no GitHub Pages.
 
-Cria e implanta o aplicativo no GitHub Pages.
 
+## Testes
+
+1. `npm test` executa os testes presentes no arquivo`.test.js`.
+
+
+## Repositório relacionado
+
+[SME Fila da creche API](https://github.com/prefeiturasp/SME-fila-da-creche-API)
+ 
 ---
 
 Baseado no Readme do [i-educar](https://github.com/portabilis/i-educar)
