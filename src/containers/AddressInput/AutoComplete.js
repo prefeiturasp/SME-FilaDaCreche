@@ -4,19 +4,15 @@ import Autosuggest from "react-autosuggest";
 export default class AutoComplete extends Component {
   constructor() {
     super();
-
-    // Autosuggest is a controlled component.
-    // This means that you need to provide an input value
-    // and an onChange handler that updates this value (see below).
-    // Suggestions also need to be provided to the Autosuggest,
-    // and they are initially empty because the Autosuggest is closed.
     this.state = {
       value: "",
+      addressObject: "",
       suggestions: []
     };
   }
 
   onChange = (event, { newValue }) => {
+    console.log(this.state);
     this.setState({
       value: newValue
     });
@@ -31,9 +27,12 @@ export default class AutoComplete extends Component {
     }
   };
 
-  getSuggestionValue = suggestion => suggestion.street;
+  getSuggestionValue = suggestion => {
+    this.setState({ addressObject: suggestion });
+    this.props.onAddressSelected(suggestion);
+    return suggestion.street;
+  };
 
-  // Autosuggest will call this function every time you need to clear suggestions.
   onSuggestionsClearRequested = () => {
     this.setState({
       suggestions: []
@@ -47,14 +46,15 @@ export default class AutoComplete extends Component {
   render() {
     const { value, suggestions } = this.state;
 
-    // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: "Ex: Rua doutor diogo de faria",
+      placeholder: "Ex: Rua Doutor Diogo de Faria",
       value,
-      onChange: this.onChange
+      type: "search",
+      onChange: this.onChange,
+      autoFocus: true,
+      className: "form-control col-12"
     };
 
-    // Finally, render it!
     return (
       <Autosuggest
         suggestions={suggestions}
