@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 10
+cache:
+  directories:
+    - node_modules
+script:
+  - npm install
+  - npm test
+  - docker build -t marcelomaia/fila_da_creche_frontend .
+  - docker run -d -p 8080:80 marcelomaia/fila_da_creche_frontend
+  - docker ps -a
+
+deploy:
+  provider: script
+  script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push marcelomaia/fila_da_creche_frontend
+  on:
+    branch: develop

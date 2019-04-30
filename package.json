@@ -16,7 +16,7 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^3.0.0",
     "redux": "^3.7.2"
   },
   "scripts": {
@@ -28,6 +28,18 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "puppeteer": "^1.8.0"
+    "puppeteer": "^1.15.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
