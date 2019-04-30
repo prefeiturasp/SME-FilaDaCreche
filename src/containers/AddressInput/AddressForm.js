@@ -12,8 +12,8 @@ export class AddressForm extends React.Component {
   };
 
   onAddressSelected(addressData) {
-    const { lat, lon, street } = addressData;
-    this.props.onAddressChange(street, lat, lon);
+    const { lat, lon, street, name } = addressData;
+    this.props.onAddressChange(street || name, lat, lon);
   }
   render() {
     return (
