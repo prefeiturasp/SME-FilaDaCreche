@@ -1,16 +1,16 @@
-import { BackButton } from 'components/BackButton';
-import { Banner } from 'components/Banner';
-import React from 'react';
-import { ResultsLoaded } from 'containers/Results/ResultsLoaded';
-import sendAPIRequest from 'utils/sendAPIRequest';
-import STRINGS from 'configs/Strings';
+import { BackButton } from "components/BackButton";
+import { Banner } from "components/Banner";
+import STRINGS from "configs/Strings";
+import { ResultsLoaded } from "containers/Results/ResultsLoaded";
+import React from "react";
+import sendAPIRequest from "utils/sendAPIRequest";
 
 export class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       queryResults: {
-        loadState: 'LOADING'
+        loadState: "LOADING"
       }
     };
   }
@@ -20,51 +20,55 @@ export class Results extends React.Component {
     sendAPIRequest(
       this.props.match.params.geocodedAddressLng,
       this.props.match.params.geocodedAddressLat,
-      this.props.match.params.groupCode,
+      this.props.match.params.groupCode
     ).then(
-      (result) => {
+      result => {
         this.setState({
           queryResults: {
-            loadState: 'OK',
+            loadState: "OK",
             schoolsNearby: result.results.schools,
             updatedAt: result.results.wait_updated_at,
-            waitListSize: result.results.wait,
+            waitListSize: result.results.wait
           }
         });
       },
-      (error) => {
+      error => {
         this.setState({
           queryResults: {
-            loadState: 'ERROR',
-            loadError: error,
+            loadState: "ERROR",
+            loadError: error
           }
-        })
+        });
       }
-    )
+    );
   }
 
-  renderInnerContent () {
+  renderInnerContent() {
     switch (this.state.queryResults.loadState) {
-      case 'OK':
-        return <ResultsLoaded
-          address={this.props.match.params.geocodedAddress}
-          groupCode={this.props.match.params.groupCode}
-          schoolsNearby={this.state.queryResults.schoolsNearby}
-          updatedAt={this.state.queryResults.updatedAt}
-          waitListSize={this.state.queryResults.waitListSize}
-        />
-      case 'LOADING':
-        return <Banner title={STRINGS.actions.loading_results} />
-      case 'ERROR':
+      case "OK":
+        return (
+          <ResultsLoaded
+            address={this.props.match.params.geocodedAddress}
+            groupCode={this.props.match.params.groupCode}
+            schoolsNearby={this.state.queryResults.schoolsNearby}
+            updatedAt={this.state.queryResults.updatedAt}
+            waitListSize={this.state.queryResults.waitListSize}
+          />
+        );
+      case "LOADING":
+        return <Banner title={STRINGS.actions.loading_results} />;
+      case "ERROR":
       default:
-        return <Banner
-          title={STRINGS.actions.loading_error}
-          paragraphs={[this.state.queryResults.error]}
-        />
+        return (
+          <Banner
+            title={STRINGS.actions.loading_error}
+            paragraphs={[this.state.queryResults.error]}
+          />
+        );
     }
   }
 
-  render () {
+  render() {
     return (
       <div>
         <BackButton />

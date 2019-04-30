@@ -23,3 +23,7 @@ yarn-error.log*
 .env.prod
 
 TODO.md
+
+launch.json
+build
+node_modules
