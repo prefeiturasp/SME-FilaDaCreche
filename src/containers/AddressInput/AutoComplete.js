@@ -1,4 +1,4 @@
-import API from 'configs/Api';
+import API from "configs/Api";
 import React, { Component } from "react";
 import Autosuggest from "react-autosuggest";
 
@@ -21,7 +21,9 @@ export default class AutoComplete extends Component {
 
   onSuggestionsFetchRequested = async ({ value }) => {
     if (value.length >= 4) {
-      const response = await fetch(`${API.maps_api_endpoint}/q/${value.trim()}.js`);
+      const response = await fetch(
+        `${API.maps_api_endpoint}/q/${value.trim()}.js`
+      );
       const json = await response.json();
       this.setState({ suggestions: json.results });
     }
