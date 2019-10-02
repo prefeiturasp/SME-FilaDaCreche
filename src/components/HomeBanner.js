@@ -1,19 +1,19 @@
-import React from 'react'
-import { Logo } from "./Logo";
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export const HomeBanner = (props)  => (
+import { Logo } from './Logo';
+
+export const HomeBanner = ({ paragraphs }) => (
   <div className="banner">
     <Logo />
     <hr />
     <ol className="list-ordered">
-      {props.paragraphs ? props.paragraphs.map((paragraph, i) =>
-        <li key={'p_' + i}>{paragraph}</li>
-      ) : null}
+      {paragraphs &&
+        paragraphs.map((paragraph, i) => <li key={'p_' + i}>{paragraph}</li>)}
     </ol>
   </div>
 );
 
 HomeBanner.propTypes = {
-  paragraphs : PropTypes.arrayOf(PropTypes.string)
+  paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
