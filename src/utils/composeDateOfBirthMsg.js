@@ -1,5 +1,5 @@
-import STRINGS from 'configs/Strings';
-import GLOBALS from 'configs/MainConfigs';
+import STRINGS from '../configs/Strings';
+import GLOBALS from '../configs/MainConfigs';
 
 export default function composeDateOfBirthMsg(month, year) {
   let monthName = GLOBALS.months_list[month - 1];

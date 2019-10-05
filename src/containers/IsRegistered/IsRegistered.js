@@ -1,9 +1,9 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import { BackButton } from "components/BackButton";
-import { Banner } from "components/Banner";
-import { DefaultButton } from "components/DefaultButton";
-import { ContinueButton } from "components/ContinueButton";
+import STRINGS from '../../configs/Strings';
+import { BackButton } from "../../components/BackButton";
+import { Banner } from "../../components/Banner";
+import { DefaultButton } from "../../components/DefaultButton";
+import { ContinueButton } from "../../components/ContinueButton";
 
 export class IsRegistered extends React.Component {
   render() {

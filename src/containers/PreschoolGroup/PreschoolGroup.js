@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { BackButton } from 'components/BackButton';
-import { Banner } from 'components/Banner';
-import { DefaultButton } from 'components/DefaultButton';
-import STRINGS from 'configs/Strings';
-import calculatePreschoolGroup from 'utils/calculatePreschoolGroup';
-import composeDateOfBirthMsg from 'utils/composeDateOfBirthMsg';
+import { BackButton } from "../../components/BackButton";
+import { Banner } from "../../components/Banner";
+import { DefaultButton } from '../../components/DefaultButton';
+import STRINGS from '../../configs/Strings';
+import calculatePreschoolGroup from '../../utils/calculatePreschoolGroup';
+import composeDateOfBirthMsg from '../../utils/composeDateOfBirthMsg';
 
 export class PreschoolGroup extends React.Component {
   constructor(props) {

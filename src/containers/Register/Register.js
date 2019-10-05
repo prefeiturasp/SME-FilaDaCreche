@@ -1,10 +1,10 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import { BackButton } from "components/BackButton";
-import { Banner } from "components/Banner";
-import { SubBanner } from "components/SubBanner";
-import { ContinueButton } from "components/ContinueButton";
-import { SchoolList } from "components/SchoolList";
+import STRINGS from '../../configs/Strings';
+import { BackButton } from "../../components/BackButton";
+import { Banner } from "../../components/Banner";
+import { SubBanner } from "../../components/SubBanner";
+import { ContinueButton } from "../../components/ContinueButton";
+import { SchoolList } from "../../components/SchoolList";
 
 export class Register extends React.Component {
   constructor(props) {

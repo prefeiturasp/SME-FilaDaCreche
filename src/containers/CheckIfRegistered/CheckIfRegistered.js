@@ -1,8 +1,8 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import { BackButton } from "components/BackButton";
-import { ContinueButton } from "components/ContinueButton";
-import { Banner } from "components/Banner";
+import STRINGS from '../../configs/Strings';
+import { BackButton } from "../../components/BackButton";
+import { ContinueButton } from "../../components/ContinueButton";
+import { Banner } from "../../components/Banner";
 
 export class CheckIfRegistered extends React.Component {
   render() {
