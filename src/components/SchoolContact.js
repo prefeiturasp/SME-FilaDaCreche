@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import STRINGS from 'configs/Strings';
-import GLOBALS from 'configs/MainConfigs';
+import STRINGS from '../configs/Strings';
+import GLOBALS from '../configs/MainConfigs';
 
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'

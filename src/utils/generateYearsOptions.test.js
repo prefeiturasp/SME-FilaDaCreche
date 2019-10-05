@@ -1,4 +1,4 @@
-import GLOBALS from 'configs/MainConfigs';
+import GLOBALS from '../configs/MainConfigs';
 import generateYearsOptions from './generateYearsOptions';
 
 test('Generates years option based on current date and global variables', () => {

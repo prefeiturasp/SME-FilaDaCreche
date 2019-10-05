@@ -1,8 +1,8 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import { ContinueButton } from "components/ContinueButton";
-import { HomeBanner } from "components/HomeBanner";
-import { Footer } from "components/Footer";
+import STRINGS from '../../configs/Strings';
+import { ContinueButton } from "../../components/ContinueButton";
+import { HomeBanner } from "../../components/HomeBanner";
+import { Footer } from "../../components/Footer";
 
 export class Home extends React.Component {
   render() {

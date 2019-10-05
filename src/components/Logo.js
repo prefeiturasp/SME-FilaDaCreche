@@ -1,6 +1,6 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import logoImg from 'assets/images/logo.png';
+import STRINGS from '../configs/Strings';
+import logoImg from '../assets/images/logo.png';
 
 export const Logo = () => (
   <div className="logo-banner text-center">

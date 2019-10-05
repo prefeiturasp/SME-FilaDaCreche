@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import GLOBALS from 'configs/MainConfigs';
+import GLOBALS from '../configs/MainConfigs';
 
 class GoogleAnalytics extends React.Component {
     componentWillUpdate ({ location, history }) {

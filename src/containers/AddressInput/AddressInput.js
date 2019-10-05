@@ -1,7 +1,7 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import { BackButton } from "components/BackButton";
-import { Banner } from "components/Banner";
+import STRINGS from '../../configs/Strings';
+import { BackButton } from "../../components/BackButton"
+import { Banner } from "../../components/Banner";
 import { AddressForm } from './AddressForm';
 
 export class AddressInput extends React.Component {

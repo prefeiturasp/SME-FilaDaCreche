@@ -3,9 +3,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import { DefaultButton } from 'components/DefaultButton';
-import GLOBALS from 'configs/MainConfigs';
-import STRINGS from 'configs/Strings';
+import { DefaultButton } from '../../components/DefaultButton';
+import GLOBALS from '../../configs/MainConfigs';
+import STRINGS from '../../configs/Strings';
 
 export class AddressForm extends React.Component {
   constructor(props) {

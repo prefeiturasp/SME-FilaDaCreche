@@ -1,5 +1,5 @@
 import calculatePreschoolGroup from './calculatePreschoolGroup';
-import GLOBALS from 'configs/MainConfigs';
+import GLOBALS from '../configs/MainConfigs';
 
 describe('Works in 2017', () => {
   beforeEach(() => {
