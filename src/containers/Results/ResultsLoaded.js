@@ -33,7 +33,7 @@ export const ResultsLoaded = (props) => {
             props.address,
           ),
           STRINGS.results.data_updated_at(props.updatedAt),
-          props.schoolsNearby.length ? STRINGS.results.see_list_below : null,
+          props.schoolsNearby.length ? STRINGS.results.see_list_below(props.groupCode) : null,
         ]}
       />
       {props.schoolsNearby.length ? <SchoolList
