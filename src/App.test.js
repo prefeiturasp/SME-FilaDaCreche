@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import puppeteer from 'puppeteer';
-import STRINGS from 'configs/Strings';
+import STRINGS from './configs/Strings';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

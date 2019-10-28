@@ -1,10 +1,10 @@
 import React from 'react';
-import STRINGS from 'configs/Strings';
-import { BackButton } from "components/BackButton";
-import { Banner } from "components/Banner";
-import { SubBanner } from "components/SubBanner";
-import { ContinueButton } from "components/ContinueButton";
-import { SchoolList } from "components/SchoolList";
+import STRINGS from '../../configs/Strings';
+import { BackButton } from '../../components/BackButton';
+import { Banner } from '../../components/Banner';
+import { SubBanner } from '../../components/SubBanner';
+import { ContinueButton } from '../../components/ContinueButton';
+import { SchoolList } from '../../components/SchoolList';
 
 export class Register extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ export class Register extends React.Component {
         <Banner
           title={STRINGS.actions.can_do}
         />
-        <ContinueButton title={STRINGS.actions.compare_address} subtitle={STRINGS.actions.see_wait_near} link={STRINGS.routes.address + "/" + this.state.groupCode} />
+        <ContinueButton title={STRINGS.actions.compare_address} subtitle={STRINGS.actions.see_wait_near} link={STRINGS.routes.address + '/' + this.state.groupCode} />
         <ContinueButton title={STRINGS.actions.back_to_start} subtitle="" link="/" />
       </div>
     );

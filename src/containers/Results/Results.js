@@ -1,9 +1,9 @@
-import { BackButton } from 'components/BackButton';
-import { Banner } from 'components/Banner';
 import React from 'react';
-import { ResultsLoaded } from 'containers/Results/ResultsLoaded';
-import sendAPIRequest from 'utils/sendAPIRequest';
-import STRINGS from 'configs/Strings';
+import { BackButton } from '../../components/BackButton';
+import { Banner } from '../../components/Banner';
+import { ResultsLoaded } from './ResultsLoaded';
+import sendAPIRequest from '../../utils/sendAPIRequest';
+import STRINGS from '../../configs/Strings';
 
 export class Results extends React.Component {
   constructor(props) {

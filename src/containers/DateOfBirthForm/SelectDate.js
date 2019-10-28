@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { DefaultButton } from "components/DefaultButton";
-import { SubBanner } from "components/SubBanner";
-import STRINGS from 'configs/Strings';
-import calculatePreschoolGroup from 'utils/calculatePreschoolGroup';
-import generateMonthsOptions from 'utils/generateMonthsOptions';
-import generateYearsOptions from 'utils/generateYearsOptions';
-import composeDateOfBirthMsg from 'utils/composeDateOfBirthMsg';
+import { DefaultButton } from '../../components/DefaultButton';
+import { SubBanner } from '../../components/SubBanner';
+import STRINGS from '../../configs/Strings';
+import calculatePreschoolGroup from '../../utils/calculatePreschoolGroup';
+import generateMonthsOptions from '../../utils/generateMonthsOptions';
+import generateYearsOptions from '../../utils/generateYearsOptions';
+import composeDateOfBirthMsg from '../../utils/composeDateOfBirthMsg';
 
 export class SelectDate extends React.Component {
   constructor(props) {
