@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import STRINGS from 'configs/Strings';
-import { Banner } from 'components/Banner';
-import findGroupName from 'utils/findGroupName';
-import { SchoolList } from 'components/SchoolList';
 import { Link } from 'react-router-dom';
-import { DefaultButton } from 'components/DefaultButton';
-import { ContinueButton } from 'components/ContinueButton';
-import { Spacer } from 'components/Spacer';
+import STRINGS from '../../configs/Strings';
+import { Banner } from '../../components/Banner';
+import findGroupName from '../../utils/findGroupName';
+import { SchoolList } from '../../components/SchoolList';
+import { DefaultButton } from '../../components/DefaultButton';
+import { ContinueButton } from '../../components/ContinueButton';
+import { Spacer } from '../../components/Spacer';
 
 export const ResultsLoaded = (props) => {
   const schools = props.schoolsNearby.map(school => {

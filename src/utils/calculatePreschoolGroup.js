@@ -1,4 +1,4 @@
-import GLOBALS from 'configs/MainConfigs';
+import GLOBALS from '../configs/MainConfigs';
 
 export default function calculatePreschoolGroup(monthOfBirth, yearOfBirth) {
   const checkAge = Date.parse(monthOfBirth + "/15/" + yearOfBirth); // set it to middle of month

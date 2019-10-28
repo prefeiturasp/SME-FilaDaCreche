@@ -1,5 +1,5 @@
 import React from 'react';
-import GLOBALS from 'configs/MainConfigs';
+import GLOBALS from '../configs/MainConfigs';
 
 export default function generateYearsOptions() {
   const currentYear = GLOBALS.current_year;

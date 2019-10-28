@@ -1,4 +1,4 @@
-import GLOBALS from 'configs/MainConfigs';
+import GLOBALS from '../configs/MainConfigs';
 
 export default function findGroupName (groupCode) {
   return GLOBALS.age_ranges.find(

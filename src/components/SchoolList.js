@@ -1,7 +1,7 @@
 import React from 'react';
-import { DefaultButton } from 'components/DefaultButton';
-import { School } from 'components/School';
-import STRINGS from 'configs/Strings';
+import { DefaultButton } from './DefaultButton';
+import { School } from './School';
+import STRINGS from '../configs/Strings';
 import { Link } from 'react-router-dom';
 
 const shortenedListSize = 5;

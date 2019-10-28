@@ -1,9 +1,9 @@
 import React from 'react';
-import toTitleCase from 'utils/toTitleCase';
-import convertKilometerToMeter from 'utils/convertKilometerToMeter';
-import { SchoolContact } from 'components/SchoolContact';
-import STRINGS from 'configs/Strings';
-import findGroupName from 'utils/findGroupName';
+import toTitleCase from '../utils/toTitleCase';
+import convertKilometerToMeter from '../utils/convertKilometerToMeter';
+import { SchoolContact } from './SchoolContact';
+import STRINGS from '../configs/Strings';
+import findGroupName from '../utils/findGroupName';
 
 export const School = ({school, groupCode, key}) => { console.log(school, groupCode, key); return (
   <div className="row school-list-item vertical-align" key={key}>

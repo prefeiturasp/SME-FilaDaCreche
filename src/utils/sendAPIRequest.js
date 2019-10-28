@@ -1,4 +1,4 @@
-import API from 'configs/Api';
+import API from '../configs/Api';
 
 export default function sendAPIRequest(longitude, latitude, groupCode) {
   return fetch(

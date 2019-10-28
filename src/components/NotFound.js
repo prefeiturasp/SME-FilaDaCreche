@@ -1,7 +1,7 @@
 import React from 'react';
-import { Banner } from "components/Banner";
-import { ContinueButton } from 'components/ContinueButton';
-import STRINGS from 'configs/Strings';
+import { Banner } from "./Banner";
+import { ContinueButton } from './ContinueButton';
+import STRINGS from '../configs/Strings';
 
 export class NotFound extends React.Component {
   render() {

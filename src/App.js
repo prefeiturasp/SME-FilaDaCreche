@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { Route, HashRouter, Switch } from 'react-router-dom';
-import 'App.css';
+import './App.css';
 
-import { Alert } from 'components/Alert';
-import { NotFound } from 'components/NotFound';
-import GoogleAnalytics from 'components/GoogleAnalytics';
+import { Alert } from './components/Alert';
+import { NotFound } from './components/NotFound';
+import GoogleAnalytics from './components/GoogleAnalytics';
 
-import { Home } from 'containers/Home/Home';
-import { CheckIfRegistered } from 'containers/CheckIfRegistered/CheckIfRegistered';
-import { IsRegistered } from 'containers/IsRegistered/IsRegistered';
-import { DateOfBirthForm } from 'containers/DateOfBirthForm/DateOfBirthForm';
-import { PreschoolGroup } from 'containers/PreschoolGroup/PreschoolGroup';
-import { AddressInput } from 'containers/AddressInput/AddressInput';
-import { Results } from 'containers/Results/Results';
-import { Register } from 'containers/Register/Register';
+import { Home } from './containers/Home/Home';
+import { CheckIfRegistered } from './containers/CheckIfRegistered/CheckIfRegistered';
+import { IsRegistered } from './containers/IsRegistered/IsRegistered';
+import { DateOfBirthForm } from './containers/DateOfBirthForm/DateOfBirthForm';
+import { PreschoolGroup } from './containers/PreschoolGroup/PreschoolGroup';
+import { AddressInput } from './containers/AddressInput/AddressInput';
+import { Results } from './containers/Results/Results';
+import { Register } from './containers/Register/Register';
 
-import STRINGS from 'configs/Strings';
+import STRINGS from './configs/Strings';
 
 class App extends Component {
   render() {
