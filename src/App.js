@@ -16,7 +16,7 @@ import { Results } from 'containers/Results/Results';
 import { Register } from 'containers/Register/Register';
 
 import STRINGS from 'configs/Strings';
-
+require('dotenv').config()
 class App extends Component {
   render() {
     return (
