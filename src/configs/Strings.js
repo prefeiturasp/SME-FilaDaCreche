@@ -2,9 +2,13 @@ export default {
     greeting: {
         title: "Olá, seja bem-vindo!",
         paragraphs: [
-            "Descubra como anda a fila na sua região.",
-            "Teste mais de um endereço (casa, trabalho).",
-            "Escolha a melhor opção."
+            "Quer saber como anda a busca por vagas em creches na sua região?",
+
+            "Consulte aqui antes de ir até uma escola para realizar o cadastro de solicitação de uma vaga. Você pode testar diversos endereços e avaliar qual a melhor opção!"
+
+            // "Descubra como anda a fila na sua região.",
+            // "Teste mais de um endereço (casa, trabalho).",
+            // "Escolha a melhor opção."
         ]
     },
     check_if_registered: {
@@ -23,20 +27,35 @@ export default {
         return `A criança nasceu em ${month} de ${year}`;
     },
     is_in_group_message: function (groupName) {
-        return `Pela idade, ela deveria estar no grupo ${groupName} da creche.`
+        let dist;
+        if (['Berçário I', 'Berçário II'].includes(groupName)) {
+            dist = '1,5'
+        } else {
+            dist = '2'
+        }
+        return [`Pela idade, ela deveria estar em uma turma de ${groupName} da creche.`,
+            `Nesse caso, nosso sistema mostrará vagas a até ${dist} km de distância do endereço que você digitar.`,
+            ` Como funciona a fila da creche?`,
+            `Em uma escola da Rede Municipal, você cadastra até dois endereços de sua preferência – pode ser o endereço da sua casa, do seu trabalho, de algum familiar...`,
+            `A criança concorrerá simultaneamente a uma vaga em mais de uma creche, de acordo com os seguintes critérios:`,
+            `Se a criança tem até 2 anos de idade incompletos até 31 de março do ano corrente, ela concorrerá a uma vaga de Berçário. O sistema da Secretaria Municipal de Educação procurará por vagas em creches localizadas a até 1,5 km de distância do endereço informado.
+            Mas se a criança tem de 2 a 3 anos completos até 31 de março do ano corrente, ela concorrerá a uma vaga de Mini-Grupo. Nesse caso, o sistema procurará por vagas em creches localizadas a até 2 km de distância do endereço informado.`,
+            `Ficou com dúvida ainda?`,
+            `Procure a Unidade Educacional ou entre em contato com o setor de Demanda Escolar da Diretoria Regional de Educação mais próxima.`,
+            `Veja aqui os contatos.`]
     },
     address_input: {
-        title: "Qual o endereço da sua casa ou trabalho?",
-        paragraphs: ["Vou procurar creches que fiquem até 2 quilômetros de distância do seu endereço."]
+        title: "Qual o endereço você quer consultar?",
+        paragraphs: ["Pode ser o endereço da sua casa, do trabalho, de algum familiar..."]
     },
     results: {
         total_wait_message: function (waitListTotal, groupName, numberOfSchools, address) {
             if (!numberOfSchools) return `Não há creches perto de ${address}.`;
             return `Há ${waitListTotal} crianças na fila do ${groupName} a serem distribuídas nas ${numberOfSchools} creches perto de ${address}.`;
         },
-        title_wait_message: function (waitListTotal, numberOfSchools) {
+        title_wait_message: function (waitListTotal, numberOfSchools,groupName) {
             if (!numberOfSchools) return `Não há creches próximas a este endereço.`;
-            return `Há ${waitListTotal} crianças na fila de espera destas ${numberOfSchools} creches`;
+            return `Há ${waitListTotal} crianças aguardando uma vaga de ${groupName} em uma dessas ${numberOfSchools} creches`;
         },
         data_updated_at: function (updatedAt) {
             const fomattedDate = new Date(updatedAt).toLocaleDateString('pt-BR', {
@@ -55,7 +74,7 @@ export default {
             } else {
                 dist = '2'
             }
-            return `Veja abaixo a lista das creches num raio de ${dist} quilômetros.`
+            return `Essa fila de espera corresponde ao endereço que você digitou e às creches localizadas a até ${dist} km de distância dele.`
         }
     },
     school_list_explanation: {
@@ -79,7 +98,7 @@ export default {
     registration_steps: {
         title: "Depois, vá a qualquer creche da Prefeitura e procure um funcionário para fazer o cadastro.",
         paragraphs: [
-            "A criança será cadastrada na espera de todas creches que ficam até 2 quilômetros de distância do seu endereço.",
+            "A criança será cadastrada na espera de todas creches que ficam a até 1,5km ou 2 km de distância do endereço informado, a depender de sua idade.",
             "Ao abrirmos uma nova creche na região, a criança também será incluída automaticamente na espera.",
             "Assim que sua vaga for liberada, vamos entrar em contato com você por telefone."
         ]
@@ -106,10 +125,11 @@ export default {
         see_more: "Ver mais creches",
         loading_results: "Carregando resultados...",
         check_registration_status: "Acompanhar sua posição na fila",
-        current_position_explanation: "A posição atual da criança na fila pode ser vista em outro sistema da Secretaria de Educação",
+        current_position_explanation: "A posição atual da criança na fila pode ser vista em outro sistema da Secretaria de Educação. A posição da fila pode mudar, em atendimento a casos previstos por lei.\n" +
+            "Em caso de dúvidas, procure a Unidade Educacional ou entre em contato com o setor de Demanda Escolar da Diretoria Regional de Educação mais próxima\n",
         check_wait_today: "Ver como está a espera para quem entra na fila hoje",
         you_can_check_other_address: "Você pode ver a espera também em outros endereços",
-        start_now: "Comece agora",
+        start_now: "É muito simples, vamos começar?",
         see_on_map: "Ver no mapa",
         call: "Ligar",
         back: "Voltar",

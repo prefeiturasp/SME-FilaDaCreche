@@ -8,7 +8,7 @@ export const HomeBanner = (props)  => (
     <hr />
     <ol className="list-ordered">
       {props.paragraphs ? props.paragraphs.map((paragraph, i) =>
-        <li key={'p_' + i}>{paragraph}</li>
+        <p key={'p_' + i}>{paragraph}</p>
       ) : null}
     </ol>
   </div>

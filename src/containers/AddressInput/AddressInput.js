@@ -37,7 +37,7 @@ export class AddressInput extends React.Component {
     return (
       <div>
         <BackButton />
-        <Banner title={STRINGS.address_input.title} />
+        <Banner title={STRINGS.address_input.title} paragraphs={STRINGS.address_input.paragraphs}/>
         <AddressForm onAddressChange={this.handleAddressChange} />
       </div>
     );

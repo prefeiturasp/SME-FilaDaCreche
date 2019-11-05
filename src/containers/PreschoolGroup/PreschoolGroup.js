@@ -23,7 +23,7 @@ export class PreschoolGroup extends React.Component {
   render() {
     const ageMsg = composeDateOfBirthMsg(this.props.match.params.monthOfBirth, this.props.match.params.yearOfBirth);
     const preschoolGroupName = this.state.preschoolGroupName;
-    const paragraphs = preschoolGroupName ? [STRINGS.is_in_group_message(preschoolGroupName)] : []
+    const paragraphs = preschoolGroupName ? STRINGS.is_in_group_message(preschoolGroupName) : [];
     return (
       <div>
         <BackButton />
