@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 fontawesome.library.add(faChevronRight)
 
 export const DefaultButton = (props) => (
-  <div className="default-button vertical-align" onClick={props.onClick}>
+  <div className="default-button vertical-align borda-top" onClick={props.onClick}>
     <div className="col-xs-10 no-pad">
       <h4>{props.title}</h4>
       <p>{props.subtitle}</p>

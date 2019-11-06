@@ -13,7 +13,7 @@ export const ParagraphsList = (props) => {
                             {paragraph}
                         </p>)
                 } else if(paragraph === 'Veja aqui os contatos.') {
-                    return (<a href="http://portal.sme.prefeitura.sp.gov.br/Main/Noticia/Visualizar/PortalSMESP/Demanda-nas-DREs" target='_blank'><p key={'p_' + i}>{paragraph}</p></a>)
+                    return (<a href="https://educacao.sme.prefeitura.sp.gov.br/mapa-dres/" target='_blank' ><p key={'p_' + i} className="p-link">{paragraph}</p></a>)
                 } else {
                     return (<p key={'p_' + i}>{paragraph}</p>)
                 }

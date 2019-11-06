@@ -9,12 +9,15 @@ export class Home extends React.Component {
     return (
       <div>
         <HomeBanner paragraphs={STRINGS.greeting.paragraphs} />
-        <ContinueButton title={STRINGS.actions.start_now} subtitle={STRINGS.actions.click_continue} link={STRINGS.routes.check_if_registered} />
-          <div className="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/iGzgeH-H-Zo" frameBorder="0"
+        <div className="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/iGzgeH-H-Zo" frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen></iframe>
           </div>
+            <ContinueButton title={STRINGS.actions.start_now} subtitle={STRINGS.actions.click_continue} link={STRINGS.routes.check_if_registered} />
+
+
+
         <Footer />
       </div>
     );

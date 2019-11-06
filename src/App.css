@@ -167,7 +167,7 @@ a {
 }
 @media screen and (min-width: 500px) {
   .footer {
-    position: absolute;
+    /*position: absolute;*/
   }
 }
 .list-ordered {
@@ -176,4 +176,23 @@ a {
 }
 .list-ordered li {
   margin-bottom: 5px;
+}
+
+/*Dedo do Pepe*/
+
+@media screen and (max-width: 500px) {
+  .borda-top{
+
+    margin-top: 5px;
+
+  }
+}
+
+.p-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.p-link:hover {
+  color: #bbbbbb;
 }
