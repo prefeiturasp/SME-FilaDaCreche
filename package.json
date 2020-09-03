@@ -27,6 +27,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "puppeteer": "^1.8.0"
+    "puppeteer": "^1.13.0"
   }
 }
